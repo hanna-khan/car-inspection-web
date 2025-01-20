@@ -55,7 +55,7 @@ const Navbar = () => {
 
             {/* Bottom Section */}
             <div className="bg-[#2d3239] text-white">
-                <div className="flex justify-between items-center lg:px-6 lg:py-4 px-4 py-2">
+                <div className="flex justify-between items-center lg:px-6 px-4 py-2">
                     <div className="lg:hidden flex items-center space-x-2">
                         <img
                             src="./images/logo.png"
