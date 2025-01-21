@@ -2,12 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Welcome from './components/Welcome';
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
+      <Welcome />
     </>
   );
 }
