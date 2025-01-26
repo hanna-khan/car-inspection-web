@@ -92,7 +92,7 @@ const Navbar = () => {
             </div>
             {/* Small Screen Sidebar */}
             <div
-                className={`fixed top-0 right-0 h-full w-64 bg-[#2d3239] text-white shadow-lg transform transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+                className={`z-1 fixed top-0 right-0 h-full w-64 bg-[#2d3239] text-white shadow-lg transform transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
                     }`}
             >
                 {/* Sidebar Header */}

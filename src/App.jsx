@@ -3,6 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Welcome from './components/Welcome';
+import ChooseUs from './components/ChooseUs';
+import Pricing from './components/Pricing';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
       <Navbar />
       <Hero />
       <Welcome />
+      <ChooseUs />
+      <Pricing />
+      <Footer />
     </>
   );
 }

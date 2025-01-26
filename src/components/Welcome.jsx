@@ -43,7 +43,8 @@ const Welcome = () => {
                     />
                 </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 m-16">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:m-16 m-4">
                 {[
                     {
                         title: "COMPREHENSIVE REPORTS",
@@ -72,13 +73,13 @@ const Welcome = () => {
                 ].map((item, index) => (
                     <div
                         key={index}
-                        className="p-6 bg-white shadow-md rounded-lg text-left"
+                        className="p-6 bg-white shadow-md rounded-lg text-left hover:bg-[#45a29e]  transition-all duration-300"
                     >
-                        <div className="text-[#45a29e] mb-4">{item.icon}</div>
-                        <h3 className="text-lg font-semibold mb-2 text-gray-800">
+                        <div className="text-[#000] hover:text-white mb-4">{item.icon}</div>
+                        <h3 className="text-lg font-semibold mb-2 text-gray-800 hover:text-white">
                             {item.title}
                         </h3>
-                        <p className="text-gray-600">{item.description}</p>
+                        <p className="text-gray-600 hover:text-white">{item.description}</p>
                     </div>
                 ))}
             </div>
