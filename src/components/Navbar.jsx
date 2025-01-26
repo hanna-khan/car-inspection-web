@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { MdPhoneIphone } from "react-icons/md";
-import { MdMenu, MdClose } from "react-icons/md";
-
+import { MdPhoneIphone, MdMenu, MdClose } from "react-icons/md";
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -9,8 +7,9 @@ const Navbar = () => {
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
+
     return (
-        <div className="bg-white shadow-md">
+        <div className="bg-white shadow-md relative">
             {/* Top Section */}
             <div className="hidden lg:flex justify-between items-center px-6 py-4 border-b">
                 {/* Logo */}
@@ -24,22 +23,22 @@ const Navbar = () => {
 
                 {/* Contact Info */}
                 <div className="flex items-center space-x-10 text-sm text-teal-600">
-                    <div className="flex flex-col space-x-2">
-                        <div className="flex">
+                    <div className="flex flex-col">
+                        <div className="flex items-center">
                             <MdPhoneIphone size={20} />
                             <span>CALL US</span>
                         </div>
                         <p className="text-[#7a7b7e]">+1209-734-0181</p>
                     </div>
-                    <div className="flex flex-col space-x-2">
-                        <div className="flex">
+                    <div className="flex flex-col">
+                        <div className="flex items-center">
                             <MdPhoneIphone size={20} />
                             <span>SEND US A MAIL</span>
                         </div>
                         <p className="text-[#7a7b7e]">billing@vinsolutionsdna.com</p>
                     </div>
-                    <div className="flex flex-col space-x-2">
-                        <div className="flex">
+                    <div className="flex flex-col">
+                        <div className="flex items-center">
                             <MdPhoneIphone size={20} />
                             <span>OUR ADDRESS</span>
                         </div>
@@ -90,9 +89,10 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            {/* Small Screen Sidebar */}
+
+            {/* Sidebar */}
             <div
-                className={`z-1 fixed top-0 right-0 h-full w-64 bg-[#2d3239] text-white shadow-lg transform transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+                className={`z-10 fixed top-0 left-0 h-full w-64 bg-[#2d3239] text-white shadow-lg transform transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
             >
                 {/* Sidebar Header */}
@@ -125,8 +125,15 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
-        </div>
 
+            {/* Background Overlay */}
+            {isSidebarOpen && (
+                <div
+                    className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-0"
+                    onClick={toggleSidebar}
+                ></div>
+            )}
+        </div>
     );
 };
 
