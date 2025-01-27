@@ -7,6 +7,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import NoPage from './pages/NoPage';
 import Layout from './components/Layout';
+import SampleReport from './pages/SampleReport.jsx';
+import WindowSticker from './pages/WindowSticker.jsx';
+import LearnMore from './pages/LearnMore.jsx';
+import ContactUs from './pages/ContactUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +21,24 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "about",
+        path: "aboutus",
         element: <About />,
+      },
+      {
+        path: "samplereport",
+        element: <SampleReport />,
+      },
+      {
+        path: "windowsticker",
+        element: <WindowSticker />,
+      },
+      {
+        path: "learnmore",
+        element: <LearnMore />,
+      },
+      {
+        path: "contactus",
+        element: <ContactUs />,
       },
       {
         path: "*",

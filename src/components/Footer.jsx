@@ -10,7 +10,7 @@ const Footer = () => {
                 {/* Company Info */}
                 <div>
                     <img
-                        src="./images/logo.png" // Replace with your logo URL
+                        src="./images/logo.png" 
                         alt="Logo"
                         className="mb-4 w-36"
                     />

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MdPhoneIphone, MdMenu, MdClose } from "react-icons/md";
+import { Link } from "react-router-dom"; // Import Link for routing
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -66,13 +67,13 @@ const Navbar = () => {
                     <div className="hidden lg:flex space-x-8">
                         {["Home", "About Us", "Sample Report", "Window Sticker", "Learn More", "Contact Us"].map(
                             (link, index) => (
-                                <a
+                                <Link
                                     key={index}
-                                    href="#"
+                                    to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`} // Update the routes here
                                     className="text-sm font-medium hover:text-teal-400"
                                 >
                                     {link.toUpperCase()}
-                                </a>
+                                </Link>
                             )
                         )}
                     </div>
@@ -107,13 +108,13 @@ const Navbar = () => {
                 <nav className="flex flex-col p-4 space-y-4">
                     {["Home", "About Us", "Sample Report", "Window Sticker", "Learn More", "Contact Us"].map(
                         (link, index) => (
-                            <a
+                            <Link
                                 key={index}
-                                href="#"
+                                to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`} // Same update for sidebar links
                                 className="text-lg font-medium hover:text-teal-400"
                             >
                                 {link.toUpperCase()}
-                            </a>
+                            </Link>
                         )
                     )}
                 </nav>

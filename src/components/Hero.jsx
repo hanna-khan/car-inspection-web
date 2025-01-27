@@ -6,7 +6,7 @@ const Hero = () => {
             <div
                 className="relative isolate px-6 lg:px-8 bg-cover bg-center bg-no-repeat h-screen"
                 style={{
-                    backgroundImage: "url('./images/bg2.jpg')", // Replace with the correct path
+                    backgroundImage: "url('./images/bg2.jpg')",
                 }}
             >
                 {/* Black overlay */}
