@@ -5,8 +5,8 @@ import { CiMobile4 } from "react-icons/ci";
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white py-10 px-5">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <footer className="bg-gray-900 text-white py-10 px-2 lg:px-5">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                 {/* Company Info */}
                 <div>
                     <img

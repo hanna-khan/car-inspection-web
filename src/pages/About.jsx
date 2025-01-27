@@ -1,8 +1,39 @@
 import React from 'react';
-import { FaFileAlt, FaHeadset, FaGlobe, FaTrophy, FaCarCrash, FaMobileAlt } from "react-icons/fa";
+import { FaFileAlt, FaHeadset, FaGlobe, FaTrophy, FaCarCrash, FaMobileAlt, FaUser } from "react-icons/fa";
+import { MdOutlineFolderCopy } from "react-icons/md";
+import { TbClockHour4 } from "react-icons/tb";
+import { IoBarChart } from "react-icons/io5";
+import TestimonialSection from '../components/Testimonial';
 
 
 const About = () => {
+  const stats = [
+    {
+      id: 1,
+      value: "9035",
+      label: "Vehicle Reports Delivered",
+      icon: <MdOutlineFolderCopy />, // Replace with an actual icon library if needed
+    },
+    {
+      id: 2,
+      value: "25",
+      label: "Global Data Sources",
+      icon: <IoBarChart />,
+    },
+    {
+      id: 3,
+      value: "878",
+      label: "Satisfied Customers",
+      icon: <FaUser />,
+    },
+    {
+      id: 4,
+      value: "430",
+      label: "Development Hours",
+      icon: <TbClockHour4 />,
+    },
+  ];
+
   const features = [
     {
       icon: <FaFileAlt className="text-4xl text-[#45a29e]" />,
@@ -44,7 +75,7 @@ const About = () => {
   return (
     <>
       <div
-        className="relative isolate px-6 lg:px-8 bg-cover bg-center bg-no-repeat h-[50vh] sm:h-[60vh] md:h-[70vh]"
+        className="relative isolate px-6 lg:px-8 bg-cover bg-center bg-no-repeat h-[40vh]  md:h-[50vh]"
         style={{
           backgroundImage: "url('./images/about-bg.jpg')",
         }}
@@ -106,6 +137,27 @@ const About = () => {
           ))}
         </div>
       </div>
+      <div
+        className="relative isolate px-6 lg:px-8 bg-cover bg-center bg-no-repeat h-[50vh] sm:h-[60vh] md:h-[50vh]"
+        style={{
+          backgroundImage: "url('./images/about-bg2.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10 h-full items-center">
+          {stats.map((stat) => (
+            <div
+              key={stat.id}
+              className="flex flex-col items-center justify-center border border-white p-6 bg-transparent hover:shadow-lg hover:scale-105 transition-transform"
+            >
+              <div className="text-4xl mb-4 text-white">{stat.icon}</div>
+              <div className="text-3xl font-bold text-teal-400">{stat.value}</div>
+              <div className="mt-2 text-center text-sm text-white">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <TestimonialSection />
     </>
   );
 };
