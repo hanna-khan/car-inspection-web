@@ -101,6 +101,21 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
+        <div>
+          <h1 className="text-balance text-3xl my-4 font-semibold tracking-tight text-black">
+            Location
+          </h1>
+          {/* <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.376345655585!2d67.0841779150091!3d24.860963984019877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f846f58a5b1%3A0xc772ce68787fbb07!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1674824733307!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe> */}
+
+        </div>
       </div>
     </>
   )

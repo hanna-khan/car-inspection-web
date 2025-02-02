@@ -54,14 +54,15 @@ const About = () => {
           ))}
         </div>
       </div>
+      {/* // stats section */}
       <div
-        className="relative isolate px-6 lg:px-8 bg-cover bg-center bg-no-repeat h-[50vh] sm:h-[60vh] md:h-[50vh]"
+        className="relative isolate px-6 lg:px-8 bg-cover bg-center bg-no-repeat min-h-[40vh] sm:min-h-[50vh] md:min-h-[60vh] flex items-center py-4"
         style={{
           backgroundImage: "url('./images/about-bg2.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10 h-full items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 relative z-10 w-full">
           {stats.map((stat) => (
             <div
               key={stat.id}
@@ -74,6 +75,7 @@ const About = () => {
           ))}
         </div>
       </div>
+
       <TestimonialSection />
     </ >
   );
