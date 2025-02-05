@@ -29,7 +29,7 @@ const ChooseUs = () => {
                         Here at Flowbite we focus on markets where technology, innovation.
                     </p>
                 </div>
-                <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 place-items-center">
+                <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 place-items-center justify-center items-center">
                     {featuresChooseUs.map((feature, index) => (
                         <FeatureCard
                             key={index}
