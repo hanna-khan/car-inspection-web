@@ -11,6 +11,9 @@ import SampleReport from './pages/SampleReport.jsx';
 import WindowSticker from './pages/WindowSticker.jsx';
 import LearnMore from './pages/LearnMore.jsx';
 import ContactUs from './pages/ContactUs.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import TermsCondition from './pages/TermsCondition.jsx';
+import FAQ from './pages/FAQ.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +42,18 @@ const router = createBrowserRouter([
       {
         path: "contactus",
         element: <ContactUs />,
+      },
+      {
+        path: "faq",
+        element: <FAQ />,
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "terms-and-conditions",
+        element: <TermsCondition />,
       },
       {
         path: "*",

@@ -60,7 +60,7 @@ const Navbar = () => {
 
                     {/* Navigation Links */}
                     <div className="hidden lg:flex space-x-8">
-                        {["Home", "About Us", "Sample Report", "Window Sticker"].map(
+                        {["Home", "About Us", "Sample Report", "Window Sticker", "Contact us"].map(
                             (link, index) => (
                                 <Link
                                     key={index}
@@ -83,33 +83,14 @@ const Navbar = () => {
                             </button>
                             {isDropdownOpen && (
                                 <div className="absolute left-0  w-48 bg-[#2d3239] text-white shadow-lg rounded-lg z-20">
-                                    <div
-                                        className="relative group"
-                                        onMouseEnter={() => setIsPolicyDropdownOpen(true)}
-                                        onMouseLeave={() => setIsPolicyDropdownOpen(false)}
-                                    >
-                                        <button className="block px-4 py-2 w-full text-left border-b-2 border-gray-700">
-                                            Our Policies
-                                        </button>
-                                        {isPolicyDropdownOpen && (
-                                            <div className="absolute left-40 top-5 w-48 bg-[#2d3239] text-white shadow-lg rounded-lg z-20">
-                                                <Link to="/privacy-policy" className="block px-4 py-2 border-b-2 border-gray-700">
-                                                    Privacy Policy
-                                                </Link>
-                                                <Link to="/terms-and-conditions" className="block px-4 py-2 border-b-2 border-gray-700">
-                                                    Terms & Conditions
-                                                </Link>
-                                                <Link to="/refund-policy" className="block px-4 py-2 border-b-2 border-gray-700">
-                                                    Refund Policy
-                                                </Link>
-                                            </div>
-                                        )}
-                                    </div>
-                                    <Link to="/faq" className="block px-4 py-2 border-b-2 border-gray-700" >
-                                        FAQ
+                                    <Link to="/privacy-policy" className="block px-4 py-2 border-b-2 border-gray-700">
+                                        Privacy Policy
                                     </Link>
-                                    <Link to="/global-policy" className="block px-4 py-2">
-                                        Global Service Coverage
+                                    <Link to="/terms-and-conditions" className="block px-4 py-2 border-b-2 border-gray-700">
+                                        Terms & Conditions
+                                    </Link>
+                                    <Link to="/faq" className="block px-4 py-2" >
+                                        FAQ
                                     </Link>
                                 </div>
                             )}
