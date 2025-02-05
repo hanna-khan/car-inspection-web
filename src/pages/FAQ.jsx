@@ -33,7 +33,7 @@ const FAQ = () => {
                                             <FaQuestionCircle className='mt-2' color='#3d474a' />
                                         </span>
                                         <span
-                                            className={`text-md font-medium ${openIndex === index ? 'text-[#45a29e]' : 'text-gray-700 hover:text-[#45a29e]'}`}
+                                            className={`text-md font-medium ${openIndex === index ? 'text-[#818181]' : 'text-gray-700 hover:text-[#818181]'}`}
                                         >
                                             {faq.question}
                                         </span>

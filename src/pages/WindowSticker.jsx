@@ -20,7 +20,7 @@ const WindowSticker = () => {
                             <p>
                                 Following the Automobile Information Disclosure Act of 1958 led by Oklahoma senator Mike Monroney, the NHTSA and EPA updated the rule in May 2011, mandating the new label for 2013 models and above to include an estimate of fuel or electricity consumption for 100 miles, thus providing a clue of the fuel consumption per distance traveled. This update is especially crucial for electric, plug-in hybrids, hydrogen fuel cell, flexible-fuel, and natural gas vehicles manufactured in the United States.
                             </p>
-                            <button className="bg-[#45a29e] text-white px-4 py-2 rounded hover:bg-teal-600">
+                            <button className="bg-[#818181] text-white px-4 py-2 rounded hover:bg-teal-600">
                                 Get your window sticker
                             </button>
                         </div>

@@ -100,37 +100,37 @@ export const stats = [
 
 export const features = [
     {
-        icon: <FaFileAlt className="text-4xl text-[#45a29e]" />,
+        icon: <FaFileAlt className="text-4xl text-[#818181]" />,
         title: "Comprehensive Reports",
         description:
             "Access detailed reports that cover everything from accident history. We leave no stone unturned in delivering the information you need.",
     },
     {
-        icon: <FaHeadset className="text-4xl text-[#45a29e]" />,
+        icon: <FaHeadset className="text-4xl text-[#818181]" />,
         title: "Free Support",
         description:
             "Our dedicated customer support team is available 24/7 to assist you with any questions or issues. We’re here to ensure your experience hassle-free.",
     },
     {
-        icon: <FaGlobe className="text-4xl text-[#45a29e]" />,
+        icon: <FaGlobe className="text-4xl text-[#818181]" />,
         title: "Global Reach",
         description:
             "Our extensive database pulls information from reliable sources worldwide, ensuring you receive the most accurate and up-to-date vehicle history available.",
     },
     {
-        icon: <FaTrophy className="text-4xl text-[#45a29e]" />,
+        icon: <FaTrophy className="text-4xl text-[#818181]" />,
         title: "Affordable Pricing",
         description:
             "Get detailed vehicle history reports at competitive prices. We believe in providing value without compromising on quality or accuracy.",
     },
     {
-        icon: <FaCarCrash className="text-4xl text-[#45a29e]" />,
+        icon: <FaCarCrash className="text-4xl text-[#818181]" />,
         title: "Accident History",
         description:
             "Access detailed accident history and damage reports to make informed decisions about your vehicle.",
     },
     {
-        icon: <FaMobileAlt className="text-4xl text-[#45a29e]" />,
+        icon: <FaMobileAlt className="text-4xl text-[#818181]" />,
         title: "User-Friendly Interface",
         description:
             "Our interface is designed for ease of use, delivering instant results for your convenience.",

@@ -10,15 +10,18 @@ const Hero = () => {
                 }}
             >
                 {/* Black overlay */}
-                <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+                <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
                 <div className="relative mx-auto max-w-3xl flex flex-col items-center justify-center h-full z-20">
                     <div className="">
                         <h1 className="text-balance text-2xl font-semibold tracking-tight text-white sm:text-5xl">
-                            Welcome to <br /> PRO INSPECT AUTO
+                            Welcome to {" "}
+                            <span className="text-textSecondary">
+                                PRO INSPECT AUTO
+                            </span>
                             <br />
 
-                            <span className="text-[#45a29e]">
-                            Your Trusted Car Inspection Service
+                            <span className="text-textSecondary">
+                                Your Trusted Car Inspection Service
                             </span>
                         </h1>
                         <p className="mt-8 text-pretty text-[12px] text-white">
@@ -31,7 +34,7 @@ const Hero = () => {
                         <div className="mt-10 flex gap-x-6">
                             <a
                                 href="#"
-                                className="rounded-md bg-[#45a29e] px-4 py-2 text-[12px] font-semibold text-white shadow-sm hover:bg-[#45a29dae]"
+                                className="rounded-md bg-[#818181] px-4 py-2 text-[12px] font-semibold text-white shadow-sm hover:bg-[#2d3239b4]"
                             >
                                 Buy Report
                             </a>

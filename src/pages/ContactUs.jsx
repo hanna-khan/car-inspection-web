@@ -21,28 +21,28 @@ const ContactUs = () => {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-teal-500"
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
                   />
                   <input
                     type="email"
                     placeholder="Your Email Id"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-teal-500"
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
                   />
                   <input
                     type="text"
                     placeholder="Phone"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-teal-500"
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
                   />
                   <input
                     type="text"
                     placeholder="Subject"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-teal-500"
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
                   />
                 </div>
                 <textarea
                   rows="5"
                   placeholder="Your Message..."
-                  className="border border-gray-300 rounded-lg p-3 w-full focus:outline-teal-500"
+                  className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
                 ></textarea>
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center">

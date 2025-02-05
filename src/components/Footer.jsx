@@ -5,12 +5,12 @@ import { CiMobile4 } from "react-icons/ci";
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white py-10 px-2 lg:px-5">
+        <footer className="bg-black text-white py-10 px-2 lg:px-5">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                 {/* Company Info */}
                 <div>
                     <img
-                        src="./images/logo.png" 
+                        src="./images/logo.jpg" 
                         alt="Logo"
                         className="mb-4 w-36"
                     />
@@ -22,7 +22,7 @@ const Footer = () => {
                 {/* Registered By */}
                 <div>
                     <h3 className="text-lg font-semibold mb-4">REGISTERED BY</h3>
-                    <div className="border-b-2 border-teal-500 w-12 mb-4"></div>
+                    <div className="border-b-2 border-[#818181] w-12 mb-4"></div>
                     <div className="gap-2 grid grid-cols-2">
                         <img
                             src="./images/logo1.png"
@@ -50,7 +50,7 @@ const Footer = () => {
                 {/* Learn More */}
                 <div>
                     <h3 className="text-lg font-semibold mb-4">LEARN MORE</h3>
-                    <div className="border-b-2 border-teal-500 w-12 mb-4"></div>
+                    <div className="border-b-2 border-[#818181] w-12 mb-4"></div>
                     <ul className="space-y-2 text-gray-300">
                         {[
                             "About Us",
@@ -74,7 +74,7 @@ const Footer = () => {
                 {/* Contact Us */}
                 <div>
                     <h3 className="text-lg font-semibold mb-4">CONTACT US</h3>
-                    <div className="border-b-2 border-teal-500 w-12 mb-4"></div>
+                    <div className="border-b-2 border-[#818181] w-12 mb-4"></div>
                     <ul className="space-y-3 text-gray-300">
                         <li className="flex">
                             <div className="mt-2 mr-4 items-start flex">

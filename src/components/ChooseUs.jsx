@@ -6,7 +6,7 @@ import { featuresChooseUs } from '../utils/Data';
 const FeatureCard = ({ icon, title, description }) => {
     return (
         <div className="flex flex-col justify-center items-center">
-            <div className="flex text-3xl justify-center items-center mb-4 w-16 h-16  bg-[#45a29e]">
+            <div className="flex text-3xl justify-center items-center mb-4 w-16 h-16  bg-[#818181]">
                 {icon}
             </div>
             <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>

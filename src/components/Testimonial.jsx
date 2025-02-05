@@ -24,7 +24,7 @@ const TestimonialSection = () => {
         <div className="bg-gray-50 py-16">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    OUR <span className="text-teal-500">TESTIMONIAL</span>
+                    OUR <span className="text-[#818181]">TESTIMONIAL</span>
                 </h2>
                 <p className="text-gray-600 mb-12">
                     Hear from our satisfied customers who have benefited from our comprehensive vehicle history
@@ -50,13 +50,13 @@ const TestimonialSection = () => {
                                 <img
                                     src={testimonials[currentIndex].image}
                                     alt={testimonials[currentIndex].name}
-                                    className="w-16 h-16 rounded-full border-4 border-teal-500"
+                                    className="w-16 h-16 rounded-full border-4 border-[#818181]"
                                 />
                                 <div className="ml-4">
                                     <h4 className="text-lg font-bold text-gray-800">
                                         {testimonials[currentIndex].name}
                                     </h4>
-                                    <p className="text-teal-500 text-sm">
+                                    <p className="text-[#818181] text-sm">
                                         {testimonials[currentIndex].role}
                                     </p>
                                 </div>
@@ -72,13 +72,13 @@ const TestimonialSection = () => {
                                 <img
                                     src={testimonials[nextIndex].image}
                                     alt={testimonials[nextIndex].name}
-                                    className="w-16 h-16 rounded-full border-4 border-teal-500"
+                                    className="w-16 h-16 rounded-full border-4 border-[#818181]"
                                 />
                                 <div className="ml-4">
                                     <h4 className="text-lg font-bold text-gray-800">
                                         {testimonials[nextIndex].name}
                                     </h4>
-                                    <p className="text-teal-500 text-sm">
+                                    <p className="text-[#818181] text-sm">
                                         {testimonials[nextIndex].role}
                                     </p>
                                 </div>

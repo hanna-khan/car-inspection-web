@@ -45,7 +45,7 @@ const Pricing = () => {
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-14 lg:px-6">
                 <div className="mx-auto max-w-screen-md text-center mb-6 lg:mb-10">
                     <h2 className="mb-3 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                        Our <span className="text-[#45a29e]">PRICING</span>
+                        Our <span className="text-[#818181]">PRICING</span>
                     </h2>
                     <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                         Choose a plan that suits your needs and budget. Grab exclusive discounts for a limited time!

@@ -12,7 +12,7 @@ const Welcome = () => {
         {/* Left Content */}
         <div className="w-full lg:w-1/2 px-6">
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-            WELCOME TO <span className="text-[#45a29e]">PRO INSPECT AUTO</span>
+            WELCOME TO <span className="text-[#818181]">PRO INSPECT AUTO</span>
           </h1>
 
           <p className="text-[#7a7b7e] max-w-xl mb-8">
@@ -32,7 +32,7 @@ const Welcome = () => {
         {welcomeData.map((feature, index) => (
           <div
             key={index}
-            className="p-6 bg-white shadow-md rounded-lg text-left hover:bg-[#45a29e] transition-all duration-300"
+            className="p-6 bg-white shadow-md rounded-lg text-left hover:bg-[#818181] transition-all duration-300"
           >
             <div className="text-[#000] hover:text-white mb-4">{feature.icon}</div>
             <h3 className="text-lg font-semibold mb-2 text-gray-800 hover:text-white">
