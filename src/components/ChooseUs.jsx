@@ -19,13 +19,13 @@ const ChooseUs = () => {
 
 
     return (
-        <section className="bg-white dark:bg-gray-900">
+        <section className="bg-white dark:bg-secondary">
             <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                 <div className="mb-8 lg:mb-16 text-center">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                    <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                         WHY CHOOSE US?
-                    </h2>
-                    <p className="text-gray-500 sm:text-xl dark:text-gray-400">
+                    </h1>
+                    <p className="text-accent sm:text-xl dark:text-gray-400">
                         Here at Flowbite we focus on markets where technology, innovation.
                     </p>
                 </div>

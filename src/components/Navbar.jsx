@@ -56,8 +56,8 @@ const Navbar = () => {
             {/* Bottom Section */}
             <div className="bg-secondary text-white">
                 <div className="flex justify-between items-center lg:px-6 px-4 py-4">
-                    <div className="lg:hidden flex items-center space-x-2">
-                        <img src="./images/logo.png" alt="Logo" className="h-10 lg:h-14" />
+                    <div className="lg:hidden flex items-center">
+                        <img src="./images/logo-new.png" alt="Logo" className="h-[4rem]" />
                     </div>
 
                     {/* Navigation Links */}
@@ -112,11 +112,11 @@ const Navbar = () => {
 
             {/* Sidebar */}
             <div
-                className={`z-10 fixed top-0 left-0 h-full w-64 bg-dropdownBg text-white shadow-lg transform transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+                className={`z-10 fixed top-0 left-0 h-full w-64 bg-secondary text-white shadow-lg transform transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
             >
                 <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
-                    <img src="./images/logo.png" alt="Logo" className="h-12" />
+                    <img src="./images/logo-new.png" alt="Logo" className="h-24" />
                     <button onClick={() => setIsSidebarOpen(false)}>
                         <MdClose size={24} className="text-white" />
                     </button>
@@ -129,7 +129,7 @@ const Navbar = () => {
                             <Link
                                 key={index}
                                 to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`}
-                                className="text-lg font-medium hover:text-textHover"
+                                className="text-md font-medium hover:text-textHover"
                             >
                                 {link.toUpperCase()}
                             </Link>

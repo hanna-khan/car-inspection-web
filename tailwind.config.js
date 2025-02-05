@@ -15,8 +15,13 @@ module.exports = {
         textPrimary: "#253745",
         textSecondary: "#4a5c6a",
         textHover: "#9ba8ab",
+        overlay: "rgba(0, 0, 0, 0.7)",
       },
     },
   },
   plugins: [],
 };
+
+
+
+
