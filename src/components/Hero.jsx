@@ -11,12 +11,14 @@ const Hero = () => {
             >
                 {/* Black overlay */}
                 <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-                <div className="relative mx-auto max-w-2xl flex flex-col items-center justify-center h-full z-20">
+                <div className="relative mx-auto max-w-3xl flex flex-col items-center justify-center h-full z-20">
                     <div className="">
                         <h1 className="text-balance text-2xl font-semibold tracking-tight text-white sm:text-5xl">
-                            A Better Alternative to <br />
+                            Welcome to <br /> PRO INSPECT AUTO
+                            <br />
+
                             <span className="text-[#45a29e]">
-                                Carfax for Used Car Records
+                            Your Trusted Car Inspection Service
                             </span>
                         </h1>
                         <p className="mt-8 text-pretty text-[12px] text-white">

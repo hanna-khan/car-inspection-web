@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { MdPhoneIphone, MdMenu, MdClose } from "react-icons/md";
-import { Link } from "react-router-dom"; // Import Link for routing
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);  // For Learn More dropdown
+    const [isPolicyDropdownOpen, setIsPolicyDropdownOpen] = useState(false);  // For Policy sub-dropdown
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -15,11 +17,7 @@ const Navbar = () => {
             <div className="hidden lg:flex justify-between items-center px-6 py-4 border-b">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <img
-                        src="./images/logo.png"
-                        alt="VIN Solution DNA"
-                        className="h-14"
-                    />
+                    <img src="./images/logo.png" alt="Logo" className="h-14" />
                 </div>
 
                 {/* Contact Info */}
@@ -57,33 +55,74 @@ const Navbar = () => {
             <div className="bg-[#2d3239] text-white">
                 <div className="flex justify-between items-center lg:px-6 px-4 py-2">
                     <div className="lg:hidden flex items-center space-x-2">
-                        <img
-                            src="./images/logo.png"
-                            alt="VIN Solution DNA"
-                            className="h-10 lg:h-14"
-                        />
+                        <img src="./images/logo.png" alt="Logo" className="h-10 lg:h-14" />
                     </div>
+
                     {/* Navigation Links */}
                     <div className="hidden lg:flex space-x-8">
-                        {["Home", "About Us", "Sample Report", "Window Sticker", "Learn More", "Contact Us"].map(
+                        {["Home", "About Us", "Sample Report", "Window Sticker"].map(
                             (link, index) => (
                                 <Link
                                     key={index}
-                                    to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`} // Update the routes here
+                                    to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`}
                                     className="text-sm font-medium hover:text-teal-400"
                                 >
                                     {link.toUpperCase()}
                                 </Link>
                             )
                         )}
+
+                        {/* Learn More Dropdown */}
+                        <div
+                            className="relative group"
+                            onMouseEnter={() => setIsDropdownOpen(true)}
+                            onMouseLeave={() => setIsDropdownOpen(false)}
+                        >
+                            <button className="text-sm font-medium hover:text-teal-400 flex items-center">
+                                LEARN MORE
+                            </button>
+                            {isDropdownOpen && (
+                                <div className="absolute left-0  w-48 bg-[#2d3239] text-white shadow-lg rounded-lg z-20">
+                                    <div
+                                        className="relative group"
+                                        onMouseEnter={() => setIsPolicyDropdownOpen(true)}
+                                        onMouseLeave={() => setIsPolicyDropdownOpen(false)}
+                                    >
+                                        <button className="block px-4 py-2 w-full text-left border-b-2 border-gray-700">
+                                            Our Policies
+                                        </button>
+                                        {isPolicyDropdownOpen && (
+                                            <div className="absolute left-40 top-5 w-48 bg-[#2d3239] text-white shadow-lg rounded-lg z-20">
+                                                <Link to="/privacy-policy" className="block px-4 py-2 border-b-2 border-gray-700">
+                                                    Privacy Policy
+                                                </Link>
+                                                <Link to="/terms-and-conditions" className="block px-4 py-2 border-b-2 border-gray-700">
+                                                    Terms & Conditions
+                                                </Link>
+                                                <Link to="/refund-policy" className="block px-4 py-2 border-b-2 border-gray-700">
+                                                    Refund Policy
+                                                </Link>
+                                            </div>
+                                        )}
+                                    </div>
+                                    <Link to="/faq" className="block px-4 py-2 border-b-2 border-gray-700" >
+                                        FAQ
+                                    </Link>
+                                    <Link to="/global-policy" className="block px-4 py-2">
+                                        Global Service Coverage
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
                     </div>
+
                     {/* Login Button */}
                     <div className="flex items-center space-x-4">
                         <button className="bg-[#45a29e] text-white lg:px-6 lg:py-2 py-2 px-4 rounded hover:bg-teal-600 lg:text-md text-xs">
                             LOGIN
                         </button>
                         <div className="lg:hidden">
-                            <button onClick={toggleSidebar}>
+                            <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                                 <MdMenu size={28} className="text-white" />
                             </button>
                         </div>
@@ -93,13 +132,13 @@ const Navbar = () => {
 
             {/* Sidebar */}
             <div
-                className={`z-10 fixed top-0 left-0 h-full w-64 bg-[#2d3239] text-white shadow-lg transform transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-                    }`}
+                className={`z-10 fixed top-0 left-0 h-full w-64 bg-[#2d3239] text-white shadow-lg transform transition-transform duration-300 ${
+                    isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+                }`}
             >
-                {/* Sidebar Header */}
                 <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
-                    <img src="./images/logo.png" alt="VIN Solution DNA" className="h-12" />
-                    <button onClick={toggleSidebar}>
+                    <img src="./images/logo.png" alt="Logo" className="h-12" />
+                    <button onClick={() => setIsSidebarOpen(false)}>
                         <MdClose size={24} className="text-white" />
                     </button>
                 </div>
@@ -110,7 +149,7 @@ const Navbar = () => {
                         (link, index) => (
                             <Link
                                 key={index}
-                                to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`} // Same update for sidebar links
+                                to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`}
                                 className="text-lg font-medium hover:text-teal-400"
                             >
                                 {link.toUpperCase()}
@@ -129,10 +168,7 @@ const Navbar = () => {
 
             {/* Background Overlay */}
             {isSidebarOpen && (
-                <div
-                    className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-0"
-                    onClick={toggleSidebar}
-                ></div>
+                <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-0" onClick={() => setIsSidebarOpen(false)}></div>
             )}
         </div>
     );
