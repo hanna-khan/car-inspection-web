@@ -48,11 +48,11 @@ const router = createBrowserRouter([
         element: <FAQ />,
       },
       {
-        path: "privacy-policy",
+        path: "privacypolicy",
         element: <PrivacyPolicy />,
       },
       {
-        path: "terms-and-conditions",
+        path: "terms&conditions",
         element: <TermsCondition />,
       },
       {

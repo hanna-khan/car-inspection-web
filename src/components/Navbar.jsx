@@ -85,10 +85,10 @@ const Navbar = () => {
                             </button>
                             {isDropdownOpen && (
                                 <div className="absolute left-0 w-48 bg-hoverBg text-white shadow-lg rounded-lg z-20">
-                                    <Link to="/privacy-policy" className="block px-4 py-2 border-b-2 border-gray-700">
+                                    <Link to="/privacypolicy" className="block px-4 py-2 border-b-2 border-gray-700">
                                         Privacy Policy
                                     </Link>
-                                    <Link to="/terms-and-conditions" className="block px-4 py-2 border-b-2 border-gray-700">
+                                    <Link to="/terms&conditions" className="block px-4 py-2 border-b-2 border-gray-700">
                                         Terms & Conditions
                                     </Link>
                                     <Link to="/faq" className="block px-4 py-2" >
@@ -124,7 +124,7 @@ const Navbar = () => {
 
                 {/* Sidebar Navigation Links */}
                 <nav className="flex flex-col p-4 space-y-4">
-                    {["Home", "About Us", "Sample Report", "Window Sticker", "Learn More", "Contact Us"].map(
+                    {["Home", "About Us", "Sample Report", "Window Sticker", "Privacy policy", "Terms & Conditions", "FAQ", "Contact Us"].map(
                         (link, index) => (
                             <Link
                                 key={index}
