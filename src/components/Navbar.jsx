@@ -41,7 +41,7 @@ const Navbar = () => {
                             <MdPhoneIphone size={20} />
                             <span>OUR ADDRESS</span>
                         </div>
-                        <p className="text-[#7a7b7e]">1632 Toyon Via, California</p>
+                        <p className="text-[#7a7b7e]"></p>
                     </div>
                 </div>
 
@@ -132,9 +132,8 @@ const Navbar = () => {
 
             {/* Sidebar */}
             <div
-                className={`z-10 fixed top-0 left-0 h-full w-64 bg-[#2d3239] text-white shadow-lg transform transition-transform duration-300 ${
-                    isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-                }`}
+                className={`z-10 fixed top-0 left-0 h-full w-64 bg-[#2d3239] text-white shadow-lg transform transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+                    }`}
             >
                 <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
                     <img src="./images/logo.png" alt="Logo" className="h-12" />

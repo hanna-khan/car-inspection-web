@@ -12,30 +12,29 @@ import { IoBarChartOutline } from "react-icons/io5";
 
 export const welcomeData = [
     {
-      title: "COMPREHENSIVE REPORTS",
-      description:
-        "Access detailed reports that cover everything from accident history. We leave no stone unturned in delivering the information you need.",
-      icon: <CiSettings size={50} />,
+        title: "Pre-Purchase Inspections",
+        description: "Comprehensive checks to help you make informed decisions before buying a used car. Includes mechanical, electrical, and body condition assessments.",
+        icon: <CiSettings size={50} />,
     },
     {
-      title: "FREE SUPPORT",
-      description:
-        "Our dedicated customer support team is available 24/7 to assist you with any questions or issues. We’re here to ensure your experience is hassle-free.",
-      icon: <BiSupport size={50} />,
+        title: "Annual Vehicle Inspections",
+        description:
+            " Routine inspections to comply with local regulations and ensure your vehicle remains in top condition. Detailed reports on any issues found.",
+        icon: <BiSupport size={50} />,
     },
     {
-      title: "GLOBAL REACH",
-      description:
-        "Our extensive database pulls information from reliable sources worldwide, ensuring you receive the most accurate and up-to-date vehicle history available.",
-      icon: <IoBarChartOutline size={50} />,
+        title: "Safety Inspections",
+        description:
+            "Focused on critical safety components like brakes, tires, lights, and steering. Aimed at preventing accidents and ensuring your safety on the road",
+        icon: <IoBarChartOutline size={50} />,
     },
     {
-      title: "AFFORDABLE PRICING",
-      description:
-        "Get detailed vehicle history reports at competitive prices. We believe in providing value without compromising on quality or accuracy.",
-      icon: <CiTrophy size={50} />,
+        title: "Emission Testing",
+        description:
+            "Assessing your vehicle's emissions to meet environmental standards. Helping you contribute to a cleaner environment.",
+        icon: <CiTrophy size={50} />,
     },
-  ];
+];
 
 export const testimonials = [
     {
@@ -140,39 +139,27 @@ export const features = [
 
 export const featuresChooseUs = [
     {
-        title: 'Marketing',
+        title: 'Experienced Technicians',
         description:
-            'Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.',
+            'Our team consists of certified and experienced professionals who are passionate about vehicles.',
         icon: <AiOutlineLike />,
     },
     {
-        title: 'Legal',
+        title: 'State-of-the-Art Equipment',
         description:
-            'Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.',
+            'We utilize the latest diagnostic tools and technology to provide accurate assessments.',
         icon: <IoPieChartOutline />,
     },
     {
-        title: 'Business Automation',
+        title: 'Transparent Reporting',
         description:
-            'Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.',
+            'We provide detailed inspection reports so you understand the condition of your vehicle.',
         icon: <RiExchangeLine />,
     },
     {
-        title: 'Marketing',
+        title: 'Customer Satisfaction',
         description:
-            'Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.',
+            'Our priority is your satisfaction. We strive to provide exceptional service and support.',
         icon: <CiTrophy />,
-    },
-    {
-        title: 'Legal',
-        description:
-            'Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.',
-        icon: <IoCarSportOutline />,
-    },
-    {
-        title: 'Business Automation',
-        description:
-            'Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.',
-        icon: <CiSettings />,
     },
 ];

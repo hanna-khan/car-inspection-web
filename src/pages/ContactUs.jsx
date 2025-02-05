@@ -76,7 +76,7 @@ const ContactUs = () => {
                   </div>
                   <div className='flex flex-col'>
                     <p className='font-semibold'>ADDRESS:</p>
-                    <p className="text-gray-800">1632 Toyon Via, California</p>
+                    <p className="text-gray-800">1901 Pennsylvania Avenue NW Suite 900, Washington, DC 20006, United States</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -106,15 +106,15 @@ const ContactUs = () => {
             Location
           </h1>
           <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sPT%20Kulkul%20Teknologi%20Internasional!5e0!3m2!1sen!2sid!4v1601138221085!5m2!1sen!2sid"
-              width="100%"
-              height="450"
-              frameBorder="0"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              aria-hidden="false"
-              tabIndex="0"
-            />
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sPT%20Kulkul%20Teknologi%20Internasional!5e0!3m2!1sen!2sid!4v1601138221085!5m2!1sen!2sid"
+            width="100%"
+            height="450"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            tabIndex="0"
+          />
 
         </div>
       </div>

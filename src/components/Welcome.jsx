@@ -12,18 +12,17 @@ const Welcome = () => {
         {/* Left Content */}
         <div className="w-full lg:w-1/2 px-6">
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-            WELCOME TO <span className="text-[#45a29e]">VIN SOLUTION DNA</span>
+            WELCOME TO <span className="text-[#45a29e]">PRO INSPECT AUTO</span>
           </h1>
-          <p className="text-black max-w-3xl mb-4">
-            Everything you need to uncover the history of your vehicle is right here at VIN Solution DNA.
-          </p>
+
           <p className="text-[#7a7b7e] max-w-xl mb-8">
-            We specialize in providing comprehensive vehicle history reports to help you make informed decisions. Our services are designed to offer clarity and transparency, whether you're buying, selling, or simply curious about your vehicle's past. We gather data from reliable sources globally, ensuring you have access to the most accurate and up-to-date information. At VIN Solution DNA, our mission is to unlock the secrets of your vehicle’s history, giving you the confidence and peace of mind you deserve...
+            At PRO INSPECT AUTO, we are dedicated to ensuring your vehicle is safe, reliable, and roadworthy. With years of experience in the automotive industry, our certified inspectors use the latest technology and techniques to provide thorough inspections.
+
           </p>
         </div>
 
         {/* Right Image */}
-        <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+        <div className="w-full lg:w-1/2 flex justify-center">
           <img src={'./images/car.png'} alt="Car" className="w-full max-w-lg object-contain" />
         </div>
       </div>

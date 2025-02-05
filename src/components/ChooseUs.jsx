@@ -16,7 +16,7 @@ const FeatureCard = ({ icon, title, description }) => {
 };
 
 const ChooseUs = () => {
- 
+
 
     return (
         <section className="bg-white dark:bg-gray-900">
