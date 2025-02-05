@@ -14,10 +14,10 @@ const Navbar = () => {
     return (
         <div className="bg-white shadow-md relative">
             {/* Top Section */}
-            <div className="hidden lg:flex justify-between items-center px-6 py-4 border-b">
+            <div className="hidden lg:flex justify-between items-center px-6 border-b">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <img src="./images/logo.png" alt="Logo" className="h-14" />
+                    <img src="./images/logo.jpg" alt="Logo" className="h-24" />
                 </div>
 
                 {/* Contact Info */}
