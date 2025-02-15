@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
                         <h3 className="text-xl font-bold text-gray-800 mb-6">Contact us</h3>
                         <div className="space-y-4">
                             <div className="flex items-center gap-4">
-                                <div className="bg-teal-600 text-white p-1 text-2xl">
+                                <div className="bg-secondary text-white p-1 text-2xl">
                                     <CiLocationOn />
                                 </div>
                                 <div className='flex flex-col'>
@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
-                                <div className="bg-teal-600 text-white p-1 text-2xl">
+                                <div className="bg-secondary text-white p-1 text-2xl">
                                     <MdOutlineMailOutline />
                                 </div>
                                 <div className='flex flex-col'>
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
-                                <div className="bg-teal-600 text-white p-1 text-2xl">
+                                <div className="bg-secondary text-white p-1 text-2xl">
                                     <IoIosPhonePortrait />
                                 </div>
                                 <div className='flex flex-col'>

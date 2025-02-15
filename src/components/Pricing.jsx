@@ -47,7 +47,7 @@ const Pricing = () => {
                     <h1 className="text-4xl font-bold text-secondary mb-4">
                         Our <span className="text-accent">PRICING</span>
                     </h1>
-                    <p className="text-gray-500 sm:text-xl">
+                    <p className="text-accent sm:text-xl">
                         Choose a plan that suits your needs and budget. Grab exclusive discounts for a limited time!
                     </p>
                 </div>

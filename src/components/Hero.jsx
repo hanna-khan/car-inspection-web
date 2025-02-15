@@ -15,7 +15,7 @@ const Hero = () => {
                 <div>
                     <h1 className="text-balance text-2xl font-semibold tracking-tight text-background sm:text-5xl">
                         Welcome to {" "} <br />
-                        <span className="text-textHover">
+                        <span className="text-white">
                             PRO INSPECT AUTO
                         </span>
                         <br />
@@ -23,14 +23,14 @@ const Hero = () => {
                             Your Trusted Car Inspection Service
                         </span>
                     </h1>
-                    <p className="mt-8 text-pretty text-[12px] text-background">
+                    <p className="mt-4 text-pretty text-[12px] text-background">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
                         autem iure perspiciatis qui laboriosam eum facere tempora et
                         impedit itaque soluta eius, architecto, est numquam minus dicta
                         atque ea reprehenderit pariatur esse recusandae animi expedita
                         doloremque. Adipisci rem in totam ipsam laboriosam. Quas, soluta.
                     </p>
-                    <div className="mt-10 flex gap-x-6">
+                    <div className="mt-8 flex gap-x-6">
                         <a
                             href="#"
                             className="rounded-md bg-secondary px-4 py-2 text-[12px] font-semibold text-background shadow-sm hover:bg-accent"

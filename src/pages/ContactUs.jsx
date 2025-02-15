@@ -15,34 +15,34 @@ const ContactUs = () => {
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
             {/* Form Section */}
             <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-2/3">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Send Message Us</h2>
+              <h2 className="text-2xl font-bold text-secondary mb-6">Send Message Us</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                   />
                   <input
                     type="email"
                     placeholder="Your Email Id"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                   />
                   <input
                     type="text"
                     placeholder="Phone"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                   />
                   <input
                     type="text"
                     placeholder="Subject"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                   />
                 </div>
                 <textarea
                   rows="5"
                   placeholder="Your Message..."
-                  className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                  className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                 ></textarea>
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center">
@@ -56,7 +56,7 @@ const ContactUs = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-3 rounded-lg font-bold hover:bg-teal-600"
+                  className="w-full bg-secondary text-white py-3 rounded-lg font-bold hover:bg-secondary"
                 >
                   Send
                 </button>
@@ -71,7 +71,7 @@ const ContactUs = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="bg-teal-600 text-white p-1 text-2xl">
+                  <div className="bg-secondary text-white p-1 text-2xl">
                     <CiLocationOn />
                   </div>
                   <div className='flex flex-col'>
@@ -80,7 +80,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-teal-600 text-white p-1 text-2xl">
+                  <div className="bg-secondary text-white p-1 text-2xl">
                     <MdOutlineMailOutline />
                   </div>
                   <div className='flex flex-col'>
@@ -89,7 +89,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-teal-600 text-white p-1 text-2xl">
+                  <div className="bg-secondary text-white p-1 text-2xl">
                     <IoIosPhonePortrait />
                   </div>
                   <div className='flex flex-col'>

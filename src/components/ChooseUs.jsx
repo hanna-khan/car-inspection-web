@@ -6,11 +6,11 @@ import { featuresChooseUs } from '../utils/Data';
 const FeatureCard = ({ icon, title, description }) => {
     return (
         <div className="flex flex-col justify-center items-center">
-            <div className="flex text-3xl justify-center items-center mb-4 w-16 h-16  bg-[#818181]">
+            <div className="flex text-3xl justify-center items-center mb-4 w-16 h-16  bg-accent">
                 {icon}
             </div>
             <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-            <p className="text-gray-500 dark:text-gray-400">{description}</p>
+            <p className="text-accent  ">{description}</p>
         </div>
     );
 };
@@ -25,7 +25,7 @@ const ChooseUs = () => {
                     <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                         WHY CHOOSE US?
                     </h1>
-                    <p className="text-accent sm:text-xl dark:text-gray-400">
+                    <p className="text-accent sm:text-xl  ">
                         Here at Flowbite we focus on markets where technology, innovation.
                     </p>
                 </div>
