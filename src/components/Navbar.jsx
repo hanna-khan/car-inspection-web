@@ -57,10 +57,10 @@ const Navbar = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="bg-secondary text-white">
-                <div className="flex justify-between items-center lg:px-6 px-4 py-4">
+            <div className="bg-white text-secondary">
+                <div className="flex justify-between items-center lg:px-6 px-4">
                     <div className="lg:hidden flex items-center">
-                        <img src="./images/pro-inspect-auto-logo-1.png" alt="Logo" className="h-[4rem]" />
+                        <img src="./images/logoo.png" alt="Logo" className="h-[4rem]" />
                     </div>
 
                     {/* Navigation Links */}
@@ -106,7 +106,7 @@ const Navbar = () => {
                     <div className="flex items-center space-x-4">
                         <div className="lg:hidden">
                             <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                                <MdMenu size={28} className="text-white" />
+                                <MdMenu size={28} className="text-secondary" />
                             </button>
                         </div>
                     </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
                     }`}
             >
                 <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
-                    <img src="./images/logo-new.png" alt="Logo" className="h-24" />
+                    <img src="./images/logoo.png" alt="Logo" className="h-24" />
                     <button onClick={() => setIsSidebarOpen(false)}>
                         <MdClose size={24} className="text-white" />
                     </button>
