@@ -57,10 +57,10 @@ const Navbar = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="bg-white text-secondary">
-                <div className="flex justify-between items-center lg:px-6 px-4">
+            <div className="bg-secondary text-white">
+                <div className="flex justify-between items-center lg:px-6 px-4 py-4">
                     <div className="lg:hidden flex items-center">
-                        <img src="./images/logoo.png" alt="Logo" className="h-[4rem]" />
+                        <img src="./images/nobglogoo.png" alt="Logo" className="h-[4rem]" />
                     </div>
 
                     {/* Navigation Links */}
@@ -106,7 +106,7 @@ const Navbar = () => {
                     <div className="flex items-center space-x-4">
                         <div className="lg:hidden">
                             <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                                <MdMenu size={28} className="text-secondary" />
+                                <MdMenu size={28} className="text-white" />
                             </button>
                         </div>
                     </div>
