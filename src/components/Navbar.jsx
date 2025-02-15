@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="hidden lg:flex justify-between items-center px-6">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <img src="./images/logo3-no-bg.png" alt="Logo" className="h-[6rem]" />
+                    <img src="./images/logoo.png" alt="Logo" className="h-[6rem]" />
                 </div>
 
                 {/* Contact Info */}
@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="bg-secondary text-white">
                 <div className="flex justify-between items-center lg:px-6 px-4 py-4">
                     <div className="lg:hidden flex items-center">
-                        <img src="./images/logo-new.png" alt="Logo" className="h-[4rem]" />
+                        <img src="./images/pro-inspect-auto-logo-1.png" alt="Logo" className="h-[4rem]" />
                     </div>
 
                     {/* Navigation Links */}
