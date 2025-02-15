@@ -14,14 +14,14 @@ const PricingCard = ({ title, description, price, originalPrice, discount, repor
             <h3 className="mb-3 text-2xl font-bold">{title}</h3>
             <p className="font-light text-gray-600 text-sm hover:text-white">{description}</p>
             <div className="flex justify-center items-baseline my-4">
-                <span className="mr-2 text-5xl font-extrabold">{price}</span>
-                {originalPrice && (
+                <span className="mr-2 text-5xl font-extrabold">{originalPrice}</span>
+                {/* {originalPrice && (
                     <span className="text-md text-gray-400 line-through">{originalPrice}</span>
-                )}
+                )} */}
             </div>
-            {discount && (
+            {/* {discount && (
                 <p className="text-green-500 font-semibold mb-3">🔥 {discount}</p>
-            )}
+            )} */}
             <ul role="list" className="mb-6 space-y-3 text-left">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center space-x-2 text-sm">

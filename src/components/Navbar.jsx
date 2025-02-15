@@ -51,9 +51,10 @@ const Navbar = () => {
                 </div>
 
                 {/* Contact Us Button */}
-                <button className="bg-primary text-white px-8 py-4 rounded hover:bg-hoverBg">
+                <Link to="/contactus" className="bg-primary text-white px-8 py-4 rounded hover:bg-hoverBg inline-block">
                     CONTACT US
-                </button>
+                </Link>
+
             </div>
 
             {/* Bottom Section */}
