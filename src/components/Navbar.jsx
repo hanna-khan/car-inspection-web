@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="hidden lg:flex justify-between items-center px-6">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <img src="./images/logo-new.png" alt="Logo" className="h-[6rem]" />
+                    <img src="./images/logo3-no-bg.png" alt="Logo" className="h-[6rem]" />
                 </div>
 
                 {/* Contact Info */}
