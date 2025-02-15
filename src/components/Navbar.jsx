@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { MdPhoneIphone, MdMenu, MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlineMailOutline } from "react-icons/md";
+
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -31,14 +34,14 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-col">
                         <div className="flex items-center">
-                            <MdPhoneIphone size={20} />
+                            <MdOutlineMailOutline size={20} />
                             <span>SEND US A MAIL</span>
                         </div>
                         <p className="text-textSecondary">billing@vinsolutionsdna.com</p>
                     </div>
                     <div className="flex flex-col">
                         <div className="flex items-center">
-                            <MdPhoneIphone size={20} />
+                            <FaLocationDot size={20} />
                             <span>OUR ADDRESS</span>
                         </div>
                         <p className="text-textSecondary">
