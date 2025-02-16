@@ -1,4 +1,5 @@
 import React from 'react';
+import PaypalButtons from './PaypalButtons';
 
 const PricingCard = ({ title, description, price, originalPrice, discount, reports }) => {
     const features = [
@@ -32,9 +33,10 @@ const PricingCard = ({ title, description, price, originalPrice, discount, repor
                     </li>
                 ))}
             </ul>
-            <a href="#" className="text-white bg-primary px-6 py-3 font-medium hover:bg-primary-dark transition-all duration-300">
+            <PaypalButtons />
+            {/* <a href="#" className="text-white bg-primary px-6 py-3 font-medium hover:bg-primary-dark transition-all duration-300">
                 Get Started
-            </a>
+            </a> */}
         </div>
     );
 };
