@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { MdPhoneIphone, MdMenu, MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { CiLocationOn, CiMobile4 } from "react-icons/ci";
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -17,7 +20,7 @@ const Navbar = () => {
             <div className="hidden lg:flex justify-between items-center px-6">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <img src="./images/logo-new.png" alt="Logo" className="h-[6rem]" />
+                    <img src="./images/logoo.png" alt="Logo" className="h-[6rem]" />
                 </div>
 
                 {/* Contact Info */}
@@ -31,14 +34,14 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-col">
                         <div className="flex items-center">
-                            <MdPhoneIphone size={20} />
+                            <MdOutlineMailOutline size={20} />
                             <span>SEND US A MAIL</span>
                         </div>
                         <p className="text-textSecondary">billing@vinsolutionsdna.com</p>
                     </div>
                     <div className="flex flex-col">
                         <div className="flex items-center">
-                            <MdPhoneIphone size={20} />
+                            <FaLocationDot size={20} />
                             <span>OUR ADDRESS</span>
                         </div>
                         <p className="text-textSecondary">
@@ -48,16 +51,17 @@ const Navbar = () => {
                 </div>
 
                 {/* Contact Us Button */}
-                <button className="bg-primary text-white px-8 py-4 rounded hover:bg-hoverBg">
+                <Link to="/contactus" className="bg-primary text-white px-8 py-4 rounded hover:bg-hoverBg inline-block">
                     CONTACT US
-                </button>
+                </Link>
+
             </div>
 
             {/* Bottom Section */}
             <div className="bg-secondary text-white">
                 <div className="flex justify-between items-center lg:px-6 px-4 py-4">
                     <div className="lg:hidden flex items-center">
-                        <img src="./images/logo-new.png" alt="Logo" className="h-[4rem]" />
+                        <img src="./images/nobglogoo.png" alt="Logo" className="h-[4rem]" />
                     </div>
 
                     {/* Navigation Links */}
@@ -116,7 +120,7 @@ const Navbar = () => {
                     }`}
             >
                 <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
-                    <img src="./images/logo-new.png" alt="Logo" className="h-24" />
+                    <img src="./images/nobglogoo.png" alt="Logo" className="h-24" />
                     <button onClick={() => setIsSidebarOpen(false)}>
                         <MdClose size={24} className="text-white" />
                     </button>

@@ -11,7 +11,9 @@ const About = () => {
       <Header title="About us" backgroundImage={"url('./images/about-bg.jpg')"} />
       <div className="px-6 py-6 lg:px-20">
         <Breadcrumb menuTitle="About us" />
-        <h1 className="text-3xl font-bold text-gray-800 my-6">ABOUT VIN SOLUTION DNA</h1>
+        <h1 className="text-3xl lg:text-4xl font-bold text-secondary mb-4">
+          WELCOME TO <span className="text-accent">ABOUT PRO INSPECT AUTO</span>
+        </h1>
 
         <div className="space-y-6 text-gray-700 leading-relaxed max-w-screen-lg">
           <p>
@@ -38,14 +40,16 @@ const About = () => {
         </div>
       </div>
       <div className="px-6 py-12 lg:px-20">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Features</h2>
+        <h1 className="text-3xl lg:text-4xl font-bold text-secondary mb-4 text-center">
+          OUR <span className="text-accent">FEATURES</span>
+        </h1>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
           {features.map((feature, index) => (
             <div
               key={index}
               className="flex items-start p-6 space-x-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
             >
-              <div className="flex-shrink-0">{feature.icon}</div>
+              <div className="flex-shrink-0 text-secondary">{feature.icon}</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -69,7 +73,7 @@ const About = () => {
               className="flex flex-col items-center justify-center border border-white p-6 bg-transparent hover:shadow-lg hover:scale-105 transition-transform"
             >
               <div className="text-4xl mb-4 text-white">{stat.icon}</div>
-              <div className="text-3xl font-bold text-teal-400">{stat.value}</div>
+              <div className="text-3xl font-bold text-white">{stat.value}</div>
               <div className="mt-2 text-center text-sm text-white">{stat.label}</div>
             </div>
           ))}

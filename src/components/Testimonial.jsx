@@ -23,10 +23,10 @@ const TestimonialSection = () => {
     return (
         <div className="bg-gray-50 py-16">
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    OUR <span className="text-[#818181]">TESTIMONIAL</span>
-                </h2>
-                <p className="text-gray-600 mb-12">
+                <h1 className="text-3xl lg:text-4xl font-bold text-secondary mb-4">
+                    OUR <span className="text-accent">TESTIMONIAL</span>
+                </h1>
+                <p className="text-accent mb-12">
                     Hear from our satisfied customers who have benefited from our comprehensive vehicle history
                     reports. Their experiences highlight the value and reliability of VIN Solution DNA.
                 </p>
@@ -34,7 +34,7 @@ const TestimonialSection = () => {
                     {/* Left Arrow */}
                     <button
                         onClick={handlePrev}
-                        className="absolute left-[10px] lg:left-[20px] text-gray-500 z-10"
+                        className="absolute left-[10px] lg:left-[20px] text-accent z-10"
                     >
                         <IoIosArrowBack size={24} />
                     </button>
@@ -43,20 +43,20 @@ const TestimonialSection = () => {
                     <div className="flex gap-8 items-center w-full justify-center">
                         {/* Testimonial 1 */}
                         <div className="bg-white shadow-lg p-6 rounded-lg w-[100%] lg:w-[40%] flex flex-col justify-between min-h-[200px]">
-                            <p className="text-gray-600 italic mb-4">
+                            <p className="text-accent italic mb-4">
                                 "{testimonials[currentIndex].quote}"
                             </p>
                             <div className="flex items-center mt-4">
                                 <img
                                     src={testimonials[currentIndex].image}
                                     alt={testimonials[currentIndex].name}
-                                    className="w-16 h-16 rounded-full border-4 border-[#818181]"
+                                    className="w-16 h-16 rounded-full border-4 border-accent"
                                 />
                                 <div className="ml-4">
                                     <h4 className="text-lg font-bold text-gray-800">
                                         {testimonials[currentIndex].name}
                                     </h4>
-                                    <p className="text-[#818181] text-sm">
+                                    <p className="text-accent text-sm">
                                         {testimonials[currentIndex].role}
                                     </p>
                                 </div>
@@ -65,20 +65,20 @@ const TestimonialSection = () => {
 
                         {/* Testimonial 2 */}
                         <div className="bg-white shadow-lg p-6 rounded-lg w-[100%] lg:w-[45%] flex flex-col justify-between min-h-[200px]">
-                            <p className="text-gray-600 italic mb-4">
+                            <p className="text-accent italic mb-4">
                                 "{testimonials[nextIndex].quote}"
                             </p>
                             <div className="flex items-center mt-4">
                                 <img
                                     src={testimonials[nextIndex].image}
                                     alt={testimonials[nextIndex].name}
-                                    className="w-16 h-16 rounded-full border-4 border-[#818181]"
+                                    className="w-16 h-16 rounded-full border-4 border-accent"
                                 />
                                 <div className="ml-4">
                                     <h4 className="text-lg font-bold text-gray-800">
                                         {testimonials[nextIndex].name}
                                     </h4>
-                                    <p className="text-[#818181] text-sm">
+                                    <p className="text-accent text-sm">
                                         {testimonials[nextIndex].role}
                                     </p>
                                 </div>

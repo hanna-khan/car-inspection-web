@@ -48,81 +48,89 @@ const ContactUs = () => {
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
             {/* Form Section */}
             <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-2/3">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                Send Message Us
-              </h2>
               <div className="space-y-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    placeholder="Your Name"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
-                    onChange={(e) =>
-                      setForm({ ...form, [e.target.name]: e.target.value })
-                    }
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    placeholder="Your Email Id"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
-                    onChange={(e) =>
-                      setForm({ ...form, [e.target.name]: e.target.value })
-                    }
-                  />
-                  <input
-                    type="text"
-                    name="number"
-                    value={form.number}
-                    placeholder="Phone"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
-                    onChange={(e) =>
-                      setForm({ ...form, [e.target.name]: e.target.value })
-                    }
-                  />
-                  <input
-                    type="text"
-                    name="subject"
-                    value={form.subject}
-                    placeholder="Subject"
-                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
-                    onChange={(e) =>
-                      setForm({ ...form, [e.target.name]: e.target.value })
-                    }
-                  />
-                </div>
-                <textarea
-                  rows="5"
-                  name="message"
-                  value={form.message}
-                  placeholder="Your Message..."
-                  className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
-                  onChange={(e) =>
-                    setForm({ ...form, [e.target.name]: e.target.value })
-                  }
-                ></textarea>
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center">
+                <h2 className="text-2xl font-bold text-secondary mb-6">
+                  Send Message Us
+                </h2>
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <input
-                      type="checkbox"
-                      className="mr-2 h-5 w-5 border border-gray-300 rounded"
+                      type="text"
+                      name="name"
+                      value={form.name}
+                      placeholder="Your Name"
+                      className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                      onChange={(e) =>
+                        setForm({ ...form, [e.target.name]: e.target.value })
+                      }
+                      // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                     />
-                    <label className="text-gray-600">I'm not a robot</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      placeholder="Your Email Id"
+                      className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                      onChange={(e) =>
+                        setForm({ ...form, [e.target.name]: e.target.value })
+                      }
+                      // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                    />
+                    <input
+                      type="text"
+                      name="number"
+                      value={form.number}
+                      placeholder="Phone"
+                      className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                      onChange={(e) =>
+                        setForm({ ...form, [e.target.name]: e.target.value })
+                      }
+                      // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                    />
+                    <input
+                      type="text"
+                      name="subject"
+                      value={form.subject}
+                      placeholder="Subject"
+                      className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                      onChange={(e) =>
+                        setForm({ ...form, [e.target.name]: e.target.value })
+                      }
+                      // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                    />
                   </div>
-                  <div
-                    className="g-recaptcha"
-                    data-sitekey="your_site_key"
-                  ></div>
+                  <textarea
+                    rows="5"
+                    name="message"
+                    value={form.message}
+                    placeholder="Your Message..."
+                    className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    onChange={(e) =>
+                      setForm({ ...form, [e.target.name]: e.target.value })
+                    }
+                    // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                  ></textarea>
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        className="mr-2 h-5 w-5 border border-gray-300 rounded"
+                      />
+                      <label className="text-gray-600">I'm not a robot</label>
+                    </div>
+                    <div
+                      className="g-recaptcha"
+                      data-sitekey="your_site_key"
+                    ></div>
+                  </div>
+                  <button
+                    onClick={submitForm}
+                    className="w-full bg-teal-600 text-white py-3 rounded-lg font-bold hover:bg-teal-600"
+                    // className="w-full bg-secondary text-white py-3 rounded-lg font-bold hover:bg-secondary"
+                  >
+                    Send
+                  </button>
                 </div>
-                <button
-                  onClick={submitForm}
-                  className="w-full bg-teal-600 text-white py-3 rounded-lg font-bold hover:bg-teal-600"
-                >
-                  Send
-                </button>
               </div>
             </div>
 

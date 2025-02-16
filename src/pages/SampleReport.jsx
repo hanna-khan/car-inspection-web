@@ -11,7 +11,7 @@ const SampleReport = () => {
             <Header title="Sample Report" backgroundImage={"url('./images/about-bg.jpg')"} />
             <div className="px-6 py-6 lg:px-20">
                 <Breadcrumb menuTitle="Sample Report" />
-                <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+                <div className="text-sm font-medium text-center text-accent border-b border-gray-200   dark:border-gray-700">
                     <ul className="flex flex-wrap -mb-px">
                         <li className="me-2">
                             <button
@@ -43,7 +43,7 @@ const SampleReport = () => {
                     <div className="bg-white shadow-lg rounded-lg p-6 mt-6">
                         <div className='w-full'>
                             <div className="md:flex">
-                                <ul className="flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-4 mb-4 md:mb-0">
+                                <ul className="flex-column space-y space-y-4 text-sm font-medium text-accent   md:me-4 mb-4 md:mb-0">
                                     <li>
                                         <a
                                             href="#"
@@ -68,7 +68,7 @@ const SampleReport = () => {
                                             className="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
                                         >
                                             <svg
-                                                className="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
+                                                className="w-4 h-4 me-2 text-accent  "
                                                 aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="currentColor"
@@ -85,7 +85,7 @@ const SampleReport = () => {
                                             className="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
                                         >
                                             <svg
-                                                className="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
+                                                className="w-4 h-4 me-2 text-accent  "
                                                 aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="currentColor"
@@ -102,7 +102,7 @@ const SampleReport = () => {
                                             className="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
                                         >
                                             <svg
-                                                className="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
+                                                className="w-4 h-4 me-2 text-accent  "
                                                 aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="currentColor"
@@ -115,9 +115,9 @@ const SampleReport = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="inline-flex items-center px-4 py-3 text-gray-400 rounded-lg cursor-not-allowed bg-gray-50 w-full dark:bg-gray-800 dark:text-gray-500">
+                                        <a className="inline-flex items-center px-4 py-3 text-gray-400 rounded-lg cursor-not-allowed bg-gray-50 w-full dark:bg-gray-800 dark:text-accent">
                                             <svg
-                                                className="w-4 h-4 me-2 text-gray-400 dark:text-gray-500"
+                                                className="w-4 h-4 me-2 text-gray-400 dark:text-accent"
                                                 aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="currentColor"

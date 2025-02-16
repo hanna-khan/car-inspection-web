@@ -9,7 +9,7 @@ const Footer = () => {
                 {/* Company Info */}
                 <div>
                     <img
-                        src="/images/logo-new.png"
+                        src="/images/nobglogoo.png"
                         alt="VIN Solution DNA Logo"
                         className="mb-4 w-36"
                     />
