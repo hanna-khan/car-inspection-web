@@ -1,48 +1,108 @@
-import React from 'react'
-import Header from '../components/Header'
-import Breadcrumb from '../components/Breadcrumb'
+import React, { useState } from "react";
+import Header from "../components/Header";
+import Breadcrumb from "../components/Breadcrumb";
 import { CiLocationOn } from "react-icons/ci";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
 
 const ContactUs = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    number: "",
+    subject: "",
+    message: "",
+  });
+
+  const submitForm = () => {
+    fetch(`${process.env.REACT_APP_BASE_API_URL}/submit`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res, "res");
+        setForm({
+          name: "",
+          email: "",
+          number: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((err) => console.log(err, "err"));
+  };
+
   return (
     <>
-      <Header title="Contact us" backgroundImage={"url('./images/about-bg.jpg')"} />
+      <Header
+        title="Contact us"
+        backgroundImage={"url('./images/about-bg.jpg')"}
+      />
       <div className="px-6 py-6 lg:px-20">
         <Breadcrumb menuTitle="Contact us" />
         <div className="bg-gray-50 py-12">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
             {/* Form Section */}
             <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-2/3">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Send Message Us</h2>
-              <form className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                Send Message Us
+              </h2>
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <input
                     type="text"
+                    name="name"
+                    value={form.name}
                     placeholder="Your Name"
                     className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    onChange={(e) =>
+                      setForm({ ...form, [e.target.name]: e.target.value })
+                    }
                   />
                   <input
                     type="email"
+                    name="email"
+                    value={form.email}
                     placeholder="Your Email Id"
                     className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    onChange={(e) =>
+                      setForm({ ...form, [e.target.name]: e.target.value })
+                    }
                   />
                   <input
                     type="text"
+                    name="number"
+                    value={form.number}
                     placeholder="Phone"
                     className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    onChange={(e) =>
+                      setForm({ ...form, [e.target.name]: e.target.value })
+                    }
                   />
                   <input
                     type="text"
+                    name="subject"
+                    value={form.subject}
                     placeholder="Subject"
                     className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                    onChange={(e) =>
+                      setForm({ ...form, [e.target.name]: e.target.value })
+                    }
                   />
                 </div>
                 <textarea
                   rows="5"
+                  name="message"
+                  value={form.message}
                   placeholder="Your Message..."
                   className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
+                  onChange={(e) =>
+                    setForm({ ...form, [e.target.name]: e.target.value })
+                  }
                 ></textarea>
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center">
@@ -52,39 +112,48 @@ const ContactUs = () => {
                     />
                     <label className="text-gray-600">I'm not a robot</label>
                   </div>
-                  <div className="g-recaptcha" data-sitekey="your_site_key"></div>
+                  <div
+                    className="g-recaptcha"
+                    data-sitekey="your_site_key"
+                  ></div>
                 </div>
                 <button
-                  type="submit"
+                  onClick={submitForm}
                   className="w-full bg-teal-600 text-white py-3 rounded-lg font-bold hover:bg-teal-600"
                 >
                   Send
                 </button>
-              </form>
+              </div>
             </div>
 
             {/* Quick Contact Section */}
             <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-1/3">
-              <h3 className="text-xl font-bold text-gray-800 mb-6">Quick Contact</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-6">
+                Quick Contact
+              </h3>
               <p className="text-gray-600 mb-6">
-                If you have any questions, simply use the following contact details.
+                If you have any questions, simply use the following contact
+                details.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="bg-teal-600 text-white p-1 text-2xl">
                     <CiLocationOn />
                   </div>
-                  <div className='flex flex-col'>
-                    <p className='font-semibold'>ADDRESS:</p>
-                    <p className="text-gray-800">1901 Pennsylvania Avenue NW Suite 900, Washington, DC 20006, United States</p>
+                  <div className="flex flex-col">
+                    <p className="font-semibold">ADDRESS:</p>
+                    <p className="text-gray-800">
+                      1901 Pennsylvania Avenue NW Suite 900, Washington, DC
+                      20006, United States
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-teal-600 text-white p-1 text-2xl">
                     <MdOutlineMailOutline />
                   </div>
-                  <div className='flex flex-col'>
-                    <p className='font-semibold'>EMAIL:</p>
+                  <div className="flex flex-col">
+                    <p className="font-semibold">EMAIL:</p>
                     <p className="text-gray-800">billing@vinsolutionsdna.com</p>
                   </div>
                 </div>
@@ -92,8 +161,8 @@ const ContactUs = () => {
                   <div className="bg-teal-600 text-white p-1 text-2xl">
                     <IoIosPhonePortrait />
                   </div>
-                  <div className='flex flex-col'>
-                    <p className='font-semibold'>PHONE:</p>
+                  <div className="flex flex-col">
+                    <p className="font-semibold">PHONE:</p>
                     <p className="text-gray-800">+1 209-734-0181</p>
                   </div>
                 </div>
@@ -115,11 +184,10 @@ const ContactUs = () => {
             aria-hidden="false"
             tabIndex="0"
           />
-
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;
