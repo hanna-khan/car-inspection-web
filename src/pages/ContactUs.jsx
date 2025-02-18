@@ -125,7 +125,7 @@ const ContactUs = () => {
                   </div>
                   <button
                     onClick={submitForm}
-                    className="w-full bg-teal-600 text-white py-3 rounded-lg font-bold hover:bg-teal-600"
+                    className="w-full bg-secondary text-white py-3 rounded-lg font-bold hover:bg-secondary"
                     // className="w-full bg-secondary text-white py-3 rounded-lg font-bold hover:bg-secondary"
                   >
                     Send
@@ -145,7 +145,7 @@ const ContactUs = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="bg-teal-600 text-white p-1 text-2xl">
+                  <div className="bg-secondary text-white p-1 text-2xl">
                     <CiLocationOn />
                   </div>
                   <div className="flex flex-col">
@@ -157,7 +157,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-teal-600 text-white p-1 text-2xl">
+                  <div className="bg-secondary text-white p-1 text-2xl">
                     <MdOutlineMailOutline />
                   </div>
                   <div className="flex flex-col">
@@ -166,7 +166,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-teal-600 text-white p-1 text-2xl">
+                  <div className="bg-secondary text-white p-1 text-2xl">
                     <IoIosPhonePortrait />
                   </div>
                   <div className="flex flex-col">
