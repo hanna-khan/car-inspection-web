@@ -63,7 +63,7 @@ const ContactUs = () => {
                       onChange={(e) =>
                         setForm({ ...form, [e.target.name]: e.target.value })
                       }
-                      // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                    // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                     />
                     <input
                       type="email"
@@ -74,7 +74,7 @@ const ContactUs = () => {
                       onChange={(e) =>
                         setForm({ ...form, [e.target.name]: e.target.value })
                       }
-                      // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                    // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                     />
                     <input
                       type="text"
@@ -85,7 +85,7 @@ const ContactUs = () => {
                       onChange={(e) =>
                         setForm({ ...form, [e.target.name]: e.target.value })
                       }
-                      // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                    // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                     />
                     <input
                       type="text"
@@ -96,7 +96,7 @@ const ContactUs = () => {
                       onChange={(e) =>
                         setForm({ ...form, [e.target.name]: e.target.value })
                       }
-                      // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                    // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                     />
                   </div>
                   <textarea
@@ -108,7 +108,7 @@ const ContactUs = () => {
                     onChange={(e) =>
                       setForm({ ...form, [e.target.name]: e.target.value })
                     }
-                    // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
+                  // className="border border-gray-300 rounded-lg p-3 w-full focus:outline-accent"
                   ></textarea>
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center">
@@ -126,7 +126,7 @@ const ContactUs = () => {
                   <button
                     onClick={submitForm}
                     className="w-full bg-secondary text-white py-3 rounded-lg font-bold hover:bg-secondary"
-                    // className="w-full bg-secondary text-white py-3 rounded-lg font-bold hover:bg-secondary"
+                  // className="w-full bg-secondary text-white py-3 rounded-lg font-bold hover:bg-secondary"
                   >
                     Send
                   </button>
@@ -151,8 +151,7 @@ const ContactUs = () => {
                   <div className="flex flex-col">
                     <p className="font-semibold">ADDRESS:</p>
                     <p className="text-gray-800">
-                      1901 Pennsylvania Avenue NW Suite 900, Washington, DC
-                      20006, United States
+                      1632 Toyon Via, California
                     </p>
                   </div>
                 </div>
@@ -162,10 +161,10 @@ const ContactUs = () => {
                   </div>
                   <div className="flex flex-col">
                     <p className="font-semibold">EMAIL:</p>
-                    <p className="text-gray-800">billing@vinsolutionsdna.com</p>
+                    <p className="text-gray-800">contact@proinspectautos.com</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <div className="bg-secondary text-white p-1 text-2xl">
                     <IoIosPhonePortrait />
                   </div>
@@ -173,12 +172,12 @@ const ContactUs = () => {
                     <p className="font-semibold">PHONE:</p>
                     <p className="text-gray-800">+1 209-734-0181</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
-        <div>
+        {/* <div>
           <h1 className="text-balance text-3xl my-4 font-semibold tracking-tight text-black">
             Location
           </h1>
@@ -192,7 +191,7 @@ const ContactUs = () => {
             aria-hidden="false"
             tabIndex="0"
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

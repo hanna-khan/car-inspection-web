@@ -25,19 +25,19 @@ const Navbar = () => {
 
                 {/* Contact Info */}
                 <div className="flex items-center space-x-10 text-textPrimary">
-                    <div className="flex flex-col">
+                    {/* <div className="flex flex-col">
                         <div className="flex items-center">
                             <MdPhoneIphone size={20} />
                             <span>CALL US</span>
                         </div>
                         <p className="text-textSecondary">+1209-734-0181</p>
-                    </div>
+                    </div> */}
                     <div className="flex flex-col">
                         <div className="flex items-center">
                             <MdOutlineMailOutline size={20} />
                             <span>SEND US A MAIL</span>
                         </div>
-                        <p className="text-textSecondary">billing@vinsolutionsdna.com</p>
+                        <p className="text-textSecondary">contact@proinspectautos.com</p>
                     </div>
                     <div className="flex flex-col">
                         <div className="flex items-center">
@@ -45,7 +45,7 @@ const Navbar = () => {
                             <span>OUR ADDRESS</span>
                         </div>
                         <p className="text-textSecondary">
-                            Washington, DC 20006, United States
+                            1632 Toyon Via, California
                         </p>
                     </div>
                 </div>

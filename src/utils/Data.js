@@ -43,7 +43,7 @@ export const testimonials = [
         role: "Student",
         image: "./images/testimonial1.jpg",
         quote:
-            "VIN Solution DNA saved me from buying a car with a hidden accident history. The report was detailed and easy to understand. Highly recommend!",
+            "PRO INSPECT AUTO saved me from buying a car with a hidden accident history. The report was detailed and easy to understand. Highly recommend!",
     },
     {
         id: 2,
@@ -51,7 +51,7 @@ export const testimonials = [
         role: "Student",
         image: "./images/testimonial2.jpg",
         quote:
-            "I was able to sell my car quickly because I had a full history report from VIN Solution DNA. The buyer was impressed with the transparency and accuracy.",
+            "I was able to sell my car quickly because I had a full history report from PRO INSPECT AUTO. The buyer was impressed with the transparency and accuracy.",
     },
     {
         id: 3,
@@ -59,7 +59,7 @@ export const testimonials = [
         role: "Teacher",
         image: "./images/testimonial1.jpg",
         quote:
-            "Using VIN Solution DNA gave me the confidence to make a smart purchase. The history report was incredibly detailed and easy to follow!",
+            "Using PRO INSPECT AUTO gave me the confidence to make a smart purchase. The history report was incredibly detailed and easy to follow!",
     },
     {
         id: 4,
@@ -67,7 +67,7 @@ export const testimonials = [
         role: "Designer",
         image: "./images/testimonial2.jpg",
         quote:
-            "Thanks to VIN Solution DNA, I avoided buying a car with hidden damages. Their service is top-notch!",
+            "Thanks to PRO INSPECT AUTO, I avoided buying a car with hidden damages. Their service is top-notch!",
     },
 ];
 
@@ -171,7 +171,7 @@ export const faqs = [
         "A Vehicle History Report provides detailed information about a vehicle’s past, including accident history, ownership records, maintenance logs, and more. It helps buyers, sellers, and owners make informed decisions.",
     },
     {
-      question: "How do I obtain a Vehicle History Report from VIN Solution DNA?",
+      question: "How do I obtain a Vehicle History Report from PRO INSPECT AUTO?",
       answer: "You can obtain a report by visiting our website and entering the vehicle's VIN number.",
     },
     {

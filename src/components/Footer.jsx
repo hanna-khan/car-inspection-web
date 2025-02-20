@@ -1,5 +1,6 @@
 import React from "react";
-import { CiLocationOn, CiMobile4 } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
 
 const Footer = () => {
@@ -10,11 +11,11 @@ const Footer = () => {
                 <div>
                     <img
                         src="/images/nobglogoo.png"
-                        alt="VIN Solution DNA Logo"
+                        alt="PRO INSPECT AUTO Logo"
                         className="mb-4 w-36"
                     />
                     <p className="text-sm text-accent">
-                        VIN Solution DNA specializes in comprehensive vehicle history reports, offering clarity and transparency for informed decision-making.
+                        At PRO INSPECT AUTO, we are dedicated to ensuring your vehicle is safe, reliable, and roadworthy. With years of experience in the automotive industry, our certified inspectors use the latest technology and techniques to provide thorough inspections.
                     </p>
                 </div>
 
@@ -43,16 +44,16 @@ const Footer = () => {
                             "About Us",
                             "Sample Report",
                             "FAQ",
-                            "Global Service Coverage",
                             "Privacy Policy",
                             "Terms & Conditions",
-                            "Return Policy",
                         ].map((item) => (
-                            <li
-                                key={item}
-                                className="hover:underline hover:text-textHover transition-colors cursor-pointer"
-                            >
-                                {item}
+                            <li key={item}>
+                                <Link
+                                    to={`/${item.toLowerCase().replace(/\s+/g, '')}`}
+                                    className="hover:underline hover:text-textHover transition-colors"
+                                >
+                                    {item}
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -70,14 +71,9 @@ const Footer = () => {
                                 value: "1632 Toyon Via, California",
                             },
                             {
-                                icon: <CiMobile4 size={22} />,
-                                label: "PHONE",
-                                value: "+1209-734-0181 (24/7 Support Line)",
-                            },
-                            {
                                 icon: <MdOutlineEmail size={22} />,
                                 label: "EMAIL",
-                                value: "billing@vinsolutionsdna.com",
+                                value: "contact@proinspectautos.com",
                             },
                         ].map((item, index) => (
                             <li key={index} className="flex">
@@ -92,12 +88,18 @@ const Footer = () => {
                 </div>
             </div>
 
+            {/* Footer Bottom Links */}
             <div className="mt-8 border-t border-accent pt-4 text-center text-sm text-accent flex flex-col md:flex-row justify-between">
                 <p>© Copyright 2024</p>
                 <ul className="flex gap-3 mt-2 md:mt-0">
-                    {["About us", "FAQ", "Contact us"].map((item) => (
-                        <li key={item} className="hover:text-textHover cursor-pointer">
-                            {item}
+                    {["About Us", "FAQ", "Contact Us"].map((item) => (
+                        <li key={item}>
+                            <Link
+                                to={`/${item.toLowerCase().replace(/\s+/g, '')}`}
+                                className="hover:text-textHover"
+                            >
+                                {item}
+                            </Link>
                         </li>
                     ))}
                 </ul>

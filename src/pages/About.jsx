@@ -17,26 +17,9 @@ const About = () => {
 
         <div className="space-y-6 text-gray-700 leading-relaxed max-w-screen-lg">
           <p>
-            At VIN Solution DNA, we specialize in delivering comprehensive vehicle history reports that empower our
-            customers to make well-informed decisions. Whether you’re buying, selling, or simply curious about your
-            vehicle's past, our services provide the clarity and transparency you need. We understand the importance of
-            knowing a vehicle’s history, which is why we gather data from reliable and trusted sources globally. This
-            ensures that you receive the most accurate and up-to-date information available.
+            At PRO INSPECT AUTO,we are dedicated to ensuring your vehicle is safe, reliable, and roadworthy. With years of experience in the automotive industry, our certified inspectors use the latest technology and techniques to provide thorough inspections.
           </p>
 
-          <p>
-            Our reports cover a wide range of details, including accident history, ownership records, maintenance logs,
-            and more. We aim to leave no stone unturned in our quest to provide you with a complete picture of your
-            vehicle's past. This thorough approach helps you avoid potential pitfalls, such as undisclosed damage or
-            hidden issues, saving you time, money, and hassle in the long run.
-          </p>
-
-          <p>
-            At VIN Solution DNA, our mission is to unlock the secrets of your vehicle’s history, giving you the confidence
-            and peace of mind you deserve. Our user-friendly website and instant report delivery make it easy for you to
-            access the information you need, when you need it. Trust us to be your partner in making smart and informed
-            vehicle-related decisions.
-          </p>
         </div>
       </div>
       <div className="px-6 py-12 lg:px-20">
@@ -80,7 +63,7 @@ const About = () => {
         </div>
       </div>
 
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
     </ >
   );
 };

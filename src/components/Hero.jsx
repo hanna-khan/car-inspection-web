@@ -24,11 +24,8 @@ const Hero = () => {
                         </span>
                     </h1>
                     <p className="mt-4 text-pretty text-[12px] text-background">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-                        autem iure perspiciatis qui laboriosam eum facere tempora et
-                        impedit itaque soluta eius, architecto, est numquam minus dicta
-                        atque ea reprehenderit pariatur esse recusandae animi expedita
-                        doloremque. Adipisci rem in totam ipsam laboriosam. Quas, soluta.
+                        At PRO INSPECT AUTO,we are dedicated to ensuring your vehicle is safe, reliable, and roadworthy. With years of experience in the automotive industry, our certified inspectors use the latest technology and techniques to provide thorough inspections.
+
                     </p>
                     <div className="mt-8 flex gap-x-6">
                         <a
