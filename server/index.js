@@ -22,6 +22,7 @@ app.post("/submit", async (req, res) => {
   const { name, email, number, subject, message } = req.body;
 
   let transporter = nodemailer.createTransport({
+    service: process.env.NODEMAILER_SERVICE,
     host: process.env.NODEMAILER_HOST,
     port: process.env.NODEMAILER_PORT,
     secure: true,
