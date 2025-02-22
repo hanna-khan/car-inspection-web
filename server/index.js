@@ -41,7 +41,7 @@ app.post("/submit", async (req, res) => {
 
   await transporter.sendMail({
     from: process.env.NODEMAILER_EMAIL,
-    to: email,
+    to: process.env.NODEMAILER_EMAIL,
     subject,
     text,
   });

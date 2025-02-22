@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
                     <div className="w-full lg:w-2/3">
                         <h2 className="text-2xl font-bold text-gray-800 mb-6">Privacy & Policy</h2>
                         <p className="space-y-6 text-gray-600 leading-relaxed max-w-screen-md">
-                            At VIN Solution DNA, we prioritize your privacy and are committed to protecting your personal information. Our Privacy & Policy page outlines how we collect, use, and safeguard your data. We collect information solely for the purpose of providing accurate and comprehensive vehicle history reports. This includes your name, contact information, and vehicle identification number (VIN). We employ advanced security measures to protect your data from unauthorized access, alteration, or disclosure. Your information is kept confidential and is not shared with third parties without your explicit consent, except as required by law. We also use cookies to enhance your browsing experience and gather usage statistics to improve our services. By using our website, you agree to the collection and use of your information as outlined in this policy. We may update our Privacy Policy periodically, and we encourage you to review it regularly. If you have any questions or concerns about our privacy practices, please contact our support team. Your trust is important to us, and we are committed to ensuring the privacy and security of your information.
+                            At PRO INSPECT AUTO, we prioritize your privacy and are committed to protecting your personal information. Our Privacy & Policy page outlines how we collect, use, and safeguard your data. We collect information solely for the purpose of providing accurate and comprehensive vehicle history reports. This includes your name, contact information, and vehicle identification number (VIN). We employ advanced security measures to protect your data from unauthorized access, alteration, or disclosure. Your information is kept confidential and is not shared with third parties without your explicit consent, except as required by law. We also use cookies to enhance your browsing experience and gather usage statistics to improve our services. By using our website, you agree to the collection and use of your information as outlined in this policy. We may update our Privacy Policy periodically, and we encourage you to review it regularly. If you have any questions or concerns about our privacy practices, please contact our support team. Your trust is important to us, and we are committed to ensuring the privacy and security of your information.
                         </p>
                     </div>
 
@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
                                 </div>
                                 <div className='flex flex-col'>
                                     <p className='font-semibold'>ADDRESS:</p>
-                                    <p className="text-gray-800">1901 Pennsylvania Avenue NW Suite 900, Washington, DC 20006, United States</p>
+                                    <p className="text-gray-800">1632 Toyon Via, California</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
@@ -38,10 +38,10 @@ const PrivacyPolicy = () => {
                                 </div>
                                 <div className='flex flex-col'>
                                     <p className='font-semibold'>EMAIL:</p>
-                                    <p className="text-gray-800">billing@vinsolutionsdna.com</p>
+                                    <p className="text-gray-800">contact@proinspectautos.com</p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-4">
+                            {/* <div className="flex items-center gap-4">
                                 <div className="bg-secondary text-white p-1 text-2xl">
                                     <IoIosPhonePortrait />
                                 </div>
@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
                                     <p className='font-semibold'>PHONE:</p>
                                     <p className="text-gray-800">+1 209-734-0181</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

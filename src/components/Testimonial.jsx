@@ -26,10 +26,10 @@ const TestimonialSection = () => {
                 <h1 className="text-3xl lg:text-4xl font-bold text-secondary mb-4">
                     OUR <span className="text-accent">TESTIMONIAL</span>
                 </h1>
-                <p className="text-accent mb-12">
+                {/* <p className="text-accent mb-12">
                     Hear from our satisfied customers who have benefited from our comprehensive vehicle history
-                    reports. Their experiences highlight the value and reliability of VIN Solution DNA.
-                </p>
+                    reports. Their experiences highlight the value and reliability of PRO INSPECT AUTO.
+                </p> */}
                 <div className="relative flex items-center justify-center">
                     {/* Left Arrow */}
                     <button
