@@ -9,11 +9,13 @@ const Footer = () => {
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Company Info */}
                 <div>
-                    <img
-                        src="/images/nobglogoo.png"
-                        alt="PRO INSPECT AUTO Logo"
-                        className="mb-4 w-36"
-                    />
+                    <Link to="/">
+                        <img src="./images/nobglogoo.png"
+                            alt="PRO INSPECT AUTO Logo"
+                            className="mb-4 w-36"
+                        />
+                    </Link>
+
                     <p className="text-sm text-accent">
                         At PRO INSPECT AUTO, we are dedicated to ensuring your vehicle is safe, reliable, and roadworthy. With years of experience in the automotive industry, our certified inspectors use the latest technology and techniques to provide thorough inspections.
                     </p>

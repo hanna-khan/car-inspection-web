@@ -20,7 +20,10 @@ const Navbar = () => {
             <div className="hidden lg:flex justify-between items-center px-6">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <img src="./images/logoo.png" alt="Logo" className="h-[6rem]" />
+                    <Link to="/" onClick={() => setIsSidebarOpen(false)}>
+                        <img src="./images/logoo.png" alt="Logo" className="h-[6rem]" />
+                    </Link>
+
                 </div>
 
                 {/* Contact Info */}
@@ -61,7 +64,9 @@ const Navbar = () => {
             <div className="bg-secondary text-white">
                 <div className="flex justify-between items-center lg:px-6 px-4 py-4">
                     <div className="lg:hidden flex items-center">
-                        <img src="./images/nobglogoo.png" alt="Logo" className="h-[4rem]" />
+                        <Link to="/" onClick={() => setIsSidebarOpen(false)}>
+                            <img src="./images/nobglogoo.png" alt="Logo" className="h-[4rem]" />
+                        </Link>
                     </div>
 
                     {/* Navigation Links */}
