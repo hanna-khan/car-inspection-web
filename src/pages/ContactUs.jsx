@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "../components/Header";
 import Breadcrumb from "../components/Breadcrumb";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineMailOutline } from "react-icons/md";
-import { ToastContainer } from "react-toastify";
 
 const ContactUs = () => {
   const [form, setForm] = useState({
@@ -16,7 +15,32 @@ const ContactUs = () => {
     message: "",
   });
 
-  const submitForm = () => {
+  const validateForm = () => {
+    if (!form.name.trim() || !form.email.trim() || !form.number.trim() || !form.subject.trim() || !form.message.trim()) {
+      toast.error("All fields are required");
+      return false;
+    }
+  
+    if (!/\S+@\S+\.\S+/.test(form.email)) {
+      toast.error("Enter a valid email address");
+      return false;
+    }
+  
+    if (!/^\d+$/.test(form.number)) {
+      toast.error("Phone number must be numeric");
+      return false;
+    }
+  
+    return true;
+  };
+  
+  const submitForm = (e) => {
+    e.preventDefault(); 
+  
+    if (!validateForm()) {
+      return;
+    }
+  
     fetch(`${process.env.REACT_APP_BASE_API_URL}/submit`, {
       method: "POST",
       headers: {
@@ -45,6 +69,8 @@ const ContactUs = () => {
         toast.error(`Failed to send message: ${err.message}`);
       });
   };
+  
+  
 
   return (
     <>
@@ -52,7 +78,6 @@ const ContactUs = () => {
       <Header title="Contact us" backgroundImage={"url('./images/about-bg.jpg')"} />
       <div className="px-6 py-6 lg:px-20">
         <Breadcrumb menuTitle="Contact us" />
-        <ToastContainer position="top-right" autoClose={3000} />
         <div className="bg-gray-50 py-12">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
             <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-2/3">
