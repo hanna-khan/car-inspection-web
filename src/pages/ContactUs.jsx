@@ -78,7 +78,7 @@ const ContactUs = () => {
       <Header title="Contact us" backgroundImage={"url('./images/about-bg.jpg')"} />
       <div className="px-6 py-6 lg:px-20">
         <Breadcrumb menuTitle="Contact us" />
-        <div className="bg-gray-50 py-12">
+        <div className="bg-gray-50 p-8">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
             <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-2/3">
               <div className="space-y-6">
