@@ -125,7 +125,9 @@ const Navbar = () => {
                     }`}
             >
                 <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
-                    <img src="./images/nobglogoo.png" alt="Logo" className="h-24" />
+                    <Link to="/" onClick={() => setIsSidebarOpen(false)}>
+                        <img src="./images/nobglogoo.png" alt="Logo" className="h-24" />
+                    </Link>
                     <button onClick={() => setIsSidebarOpen(false)}>
                         <MdClose size={24} className="text-white" />
                     </button>

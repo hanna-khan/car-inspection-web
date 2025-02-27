@@ -49,11 +49,11 @@ const Questionaire = (props) => {
                         />
                     </div>
                     <div className="mb-2">
-                        <label className="block text-gray-700 text-sm font-semibold mb-1">VIM Number</label>
+                        <label className="block text-gray-700 text-sm font-semibold mb-1">VIN Number</label>
                         <input
                             type="text"
-                            name="vimNumber"
-                            value={form.vimNumber}
+                            name="vinNumber"
+                            value={form.vinNumber}
                             onChange={handleChange}
                             className="w-full px-2 py-1 border rounded-lg focus:outline-none"
                         />

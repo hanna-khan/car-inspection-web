@@ -9,7 +9,7 @@ const Hero = () => {
         name: "",
         email: "",
         phone: "",
-        vimNumber: "",
+        vinNumber: "",
         packageType: "Basic",
     });
 
@@ -20,7 +20,7 @@ const Hero = () => {
     };
 
     const validateForm = () => {
-        if (!form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.vimNumber.trim()) {
+        if (!form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.vinNumber.trim()) {
             toast.error("All fields are required!");
             return false;
         }
@@ -41,7 +41,7 @@ const Hero = () => {
 
         toast.success("Report Request Submitted!");
         setIsModalOpen(false);
-        setForm({ name: "", email: "", phone: "", vimNumber: "", packageType: "Basic" });
+        setForm({ name: "", email: "", phone: "", vinNumber: "", packageType: "Basic" });
     };
 
     return (
@@ -95,8 +95,8 @@ const Hero = () => {
                 <input
                     type="text"
                     placeholder="Enter VIN Number"
-                    value={form.vimNumber}
-                    name="vimNumber"
+                    value={form.vinNumber}
+                    name="vinNumber"
                     onChange={handleChange}
                     className="flex-grow px-4 py-2 border rounded-lg focus:outline-none text-sm text-gray-700 placeholder-gray-400 w-full sm:w-auto"
                 />
