@@ -100,7 +100,9 @@ const Hero = () => {
                     onChange={handleChange}
                     className="flex-grow px-4 py-2 border rounded-lg focus:outline-none text-sm text-gray-700 placeholder-gray-400 w-full sm:w-auto"
                 />
-                <button className="bg-accent text-white px-4 py-2 rounded-lg hover:bg-hoverBg text-sm w-full sm:w-auto">
+                <button className="bg-accent text-white px-4 py-2 rounded-lg hover:bg-hoverBg text-sm w-full sm:w-auto"
+                    onClick={toggleModal}
+                >
                     Enter
                 </button>
             </div>

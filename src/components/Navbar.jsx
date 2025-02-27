@@ -121,7 +121,7 @@ const Navbar = () => {
 
             {/* Sidebar */}
             <div
-                className={`z-10 fixed top-0 left-0 h-full w-64 bg-secondary text-white shadow-lg transform transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+                className={`h-full z-50 fixed left-0 w-64 bg-secondary text-white shadow-lg transition-all duration-300 ${isSidebarOpen ? "top-0 opacity-100" : "-top-full opacity-0"
                     }`}
             >
                 <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
@@ -130,6 +130,7 @@ const Navbar = () => {
                         <MdClose size={24} className="text-white" />
                     </button>
                 </div>
+
 
                 {/* Sidebar Navigation Links */}
                 <nav className="flex flex-col p-4 space-y-4">
