@@ -1,7 +1,7 @@
 import React from 'react';
 import PaypalButtons from "./PaypalButtons";
 
-const Questionaire = (props: any) => {
+const Questionaire = (props) => {
     const { form, handleChange, toggleModal, handleSubmit } = props;
 
     return (
