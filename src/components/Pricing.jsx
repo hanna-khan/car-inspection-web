@@ -20,9 +20,6 @@ const PricingCard = ({ title, description, price, originalPrice, discount, repor
                     <span className="text-md text-gray-400 line-through">{originalPrice}</span>
                 )} */}
             </div>
-            {/* {discount && (
-                <p className="text-green-500 font-semibold mb-3">🔥 {discount}</p>
-            )} */}
             <ul role="list" className="mb-6 space-y-3 text-left">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center space-x-2 text-sm">
@@ -34,9 +31,6 @@ const PricingCard = ({ title, description, price, originalPrice, discount, repor
                 ))}
             </ul>
             <PaypalButtons />
-            {/* <a href="#" className="text-white bg-primary px-6 py-3 font-medium hover:bg-primary-dark transition-all duration-300">
-                Get Started
-            </a> */}
         </div>
     );
 };
