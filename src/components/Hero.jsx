@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,44 +5,9 @@ import Questionaire from "./Questionaire";
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        vimNumber: "",
-        packageType: "Basic",
-    });
+    const [vimNumber, setVimNumber] = useState("");
 
     const toggleModal = () => setIsModalOpen(!isModalOpen);
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
-
-    const validateForm = () => {
-        if (!form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.vimNumber.trim()) {
-            toast.error("All fields are required!");
-            return false;
-        }
-        if (!/\S+@\S+\.\S+/.test(form.email)) {
-            toast.error("Enter a valid email address!");
-            return false;
-        }
-        if (!/^\d{10,15}$/.test(form.phone)) {
-            toast.error("Enter a valid phone number (10-15 digits)!");
-            return false;
-        }
-        return true;
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (!validateForm()) return;
-
-        toast.success("Report Request Submitted!");
-        setIsModalOpen(false);
-        setForm({ name: "", email: "", phone: "", vimNumber: "", packageType: "Basic" });
-    };
 
     return (
         <div className="relative isolate px-6 lg:px-8 bg-cover bg-center bg-no-repeat h-[80vh] z-10"
@@ -80,11 +44,23 @@ const Hero = () => {
                 </div>
             </div>
 
+            {/* VIN Input Card */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-60px] bg-secondary bg-opacity-90 backdrop-blur-lg p-6 md:p-8 rounded-2xl shadow-2xl w-11/12 md:w-2/3 lg:w-1/2 flex items-center gap-4 z-30 border border-gray-200">
+                <input
+                    type="text"
+                    placeholder="Enter VIN Number"
+                    value={vimNumber}
+                    onChange={(e) => setVimNumber(e.target.value)}
+                    className="flex-grow px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent text-base shadow-sm"
+                />
+                <button className="bg-gradient-to-r from-accent to-hoverBg text-white font-semibold px-6 py-2 rounded-xl shadow-md hover:scale-105 transition-all duration-300 text-base">
+                    Enter
+                </button>
+            </div>
+
+
             {isModalOpen && (
                 <Questionaire
-                    form={form}
-                    handleChange={handleChange}
-                    handleSubmit={handleSubmit}
                     toggleModal={toggleModal}
                 />
             )}

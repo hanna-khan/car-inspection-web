@@ -4,7 +4,7 @@ import { welcomeData } from "../utils/Data";
 const Welcome = () => {
   return (
     <div
-      className="relative bg-cover bg-center py-16"
+      className="relative bg-cover bg-center py-16 mt-8"
       style={{ backgroundImage: "url('./images/welcome-bg.jpg')" }}
     >
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start">
