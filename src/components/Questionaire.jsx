@@ -6,7 +6,16 @@ const Questionaire = (props) => {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-[100]">
-            <div className="bg-white p-3 rounded-lg shadow-lg max-w-xs w-full">
+            <div className="relative bg-white p-3 rounded-lg shadow-lg max-w-xl w-full overflow-y-auto md:h-[65%] h-[80%]">
+                
+                {/* Close (X) Button */}
+                <button 
+                    onClick={toggleModal} 
+                    className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-lg font-bold"
+                >
+                    ✕
+                </button>
+
                 <h2 className="text-base font-semibold text-gray-800 mb-2 text-center">Request Report</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-2">
@@ -62,12 +71,14 @@ const Questionaire = (props) => {
                             <option value="Premium">Premium</option>
                         </select>
                     </div>
+
                     <PaypalButtons />
+
                     <div className="flex justify-end gap-2 mt-2">
-                        <button type="submit" className="bg-secondary text-white px-2 py-1 rounded-md hover:bg-accent text-xs">
+                        <button type="submit" className="bg-secondary text-white px-3 py-2 rounded-md hover:bg-accent text-xs">
                             Submit
                         </button>
-                        <button type="button" onClick={toggleModal} className="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600 text-xs">
+                        <button type="button" onClick={toggleModal} className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600 text-xs">
                             Close
                         </button>
                     </div>
