@@ -74,25 +74,25 @@ export const testimonials = [
 export const stats = [
     {
         id: 1,
-        value: "9035",
+        value: "600+",
         label: "Vehicle Reports Delivered",
-        icon: <MdOutlineFolderCopy />, // Replace with an actual icon library if needed
+        icon: <MdOutlineFolderCopy />,
     },
     {
         id: 2,
-        value: "25",
+        value: "15+",
         label: "Global Data Sources",
         icon: <IoBarChart />,
     },
     {
         id: 3,
-        value: "878",
+        value: "500+",
         label: "Satisfied Customers",
         icon: <FaUser />,
     },
     {
         id: 4,
-        value: "430",
+        value: "300+",
         label: "Development Hours",
         icon: <TbClockHour4 />,
     },
@@ -166,40 +166,40 @@ export const featuresChooseUs = [
 
 export const faqs = [
     {
-      question: "What is a Vehicle History Report?",
-      answer:
-        "A Vehicle History Report provides detailed information about a vehicle’s past, including accident history, ownership records, maintenance logs, and more. It helps buyers, sellers, and owners make informed decisions.",
+        question: "What is a Vehicle History Report?",
+        answer:
+            "A Vehicle History Report provides detailed information about a vehicle’s past, including accident history, ownership records, maintenance logs, and more. It helps buyers, sellers, and owners make informed decisions.",
     },
     {
-      question: "How do I obtain a Vehicle History Report from PRO INSPECT AUTO?",
-      answer: "You can obtain a report by visiting our website and entering the vehicle's VIN number.",
+        question: "How do I obtain a Vehicle History Report from PRO INSPECT AUTO?",
+        answer: "You can obtain a report by visiting our website and entering the vehicle's VIN number.",
     },
     {
-      question: "What information is included in a Vehicle VIN DNA report?",
-      answer: "The report includes accident history, title status, mileage verification, previous ownership details, and more.",
+        question: "What information is included in a Vehicle VIN DNA report?",
+        answer: "The report includes accident history, title status, mileage verification, previous ownership details, and more.",
     },
     {
-      question: "How accurate is the information in the report?",
-      answer: "Our data is sourced from reliable sources such as DMVs, insurance companies, and service records to ensure accuracy.",
+        question: "How accurate is the information in the report?",
+        answer: "Our data is sourced from reliable sources such as DMVs, insurance companies, and service records to ensure accuracy.",
     },
     {
-      question: "How quickly will I receive my report?",
-      answer: "You will receive your report instantly after the VIN is processed.",
+        question: "How quickly will I receive my report?",
+        answer: "You will receive your report instantly after the VIN is processed.",
     },
     {
-      question: "Can I get a refund if I’m not satisfied with the report?",
-      answer: "Refunds are provided under certain conditions. Please check our refund policy for details.",
+        question: "Can I get a refund if I’m not satisfied with the report?",
+        answer: "Refunds are provided under certain conditions. Please check our refund policy for details.",
     },
     {
-      question: "Is my personal information secure with Vehicle VIN DNA?",
-      answer: "Yes, we use encryption and data protection measures to keep your information secure.",
+        question: "Is my personal information secure with Vehicle VIN DNA?",
+        answer: "Yes, we use encryption and data protection measures to keep your information secure.",
     },
     {
-      question: "Are Vehicle VIN DNA reports available for vehicles outside the United States?",
-      answer: "Currently, our reports are available only for vehicles registered in the United States.",
+        question: "Are Vehicle VIN DNA reports available for vehicles outside the United States?",
+        answer: "Currently, our reports are available only for vehicles registered in the United States.",
     },
     {
-      question: "What types of vehicles can I check with Vehicle VIN DNA?",
-      answer: "Our reports cover cars, trucks, motorcycles, and some commercial vehicles.",
+        question: "What types of vehicles can I check with Vehicle VIN DNA?",
+        answer: "Our reports cover cars, trucks, motorcycles, and some commercial vehicles.",
     },
-  ];
+];
