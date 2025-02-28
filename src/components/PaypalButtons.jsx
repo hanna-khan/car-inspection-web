@@ -6,7 +6,7 @@ function Message({ content }) {
   return <p>{content}</p>;
 }
 
-function PaypalButtons() {
+function PaymentButtons({ amount }) {
   const initialOptions = {
     "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID,
     "enable-funding": "paylater,card",
@@ -36,6 +36,7 @@ function PaypalButtons() {
                   // use the "body" param to optionally pass additional order information
                   // like product ids and quantities
                   body: JSON.stringify({
+                    amount,
                     cart: [
                       {
                         id: "YOUR_PRODUCT_ID",
@@ -120,4 +121,4 @@ function PaypalButtons() {
   );
 }
 
-export default PaypalButtons;
+export default PaymentButtons;

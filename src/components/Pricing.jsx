@@ -1,5 +1,5 @@
 import React from 'react';
-import PaypalButtons from './PaypalButtons';
+import PaymentButtons from './PaypalButtons';
 
 const PricingCard = ({ title, description, price, originalPrice, discount, reports }) => {
     const features = [
@@ -30,7 +30,7 @@ const PricingCard = ({ title, description, price, originalPrice, discount, repor
                     </li>
                 ))}
             </ul>
-            <PaypalButtons />
+            <PaymentButtons amount={originalPrice} />
         </div>
     );
 };

@@ -19,7 +19,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", async (req, res) => {
-  const { name, email, number, subject, message } = req.body;
+  const { name, email, number, vinNumber, subject, message, packageType } =
+    req.body;
 
   let transporter = nodemailer.createTransport({
     service: process.env.NODEMAILER_SERVICE,
@@ -36,6 +37,8 @@ app.post("/submit", async (req, res) => {
     Name: ${name},
     Email: ${email},
     Number: ${number},
+    VIN Number: ${vinNumber},
+    Package type: ${packageType},
     Message: ${message},
   `;
 
@@ -81,7 +84,7 @@ const generateAccessToken = async () => {
  * Create an order to start the transaction.
  * @see https://developer.paypal.com/docs/api/orders/v2/#orders_create
  */
-const createOrder = async (cart) => {
+const createOrder = async (cart, amount) => {
   // use the cart information passed from the front-end to calculate the purchase unit details
   console.log(
     "shopping cart information passed from the frontend createOrder() callback:",
@@ -96,7 +99,7 @@ const createOrder = async (cart) => {
       {
         amount: {
           currency_code: "USD",
-          value: "100.00",
+          value: amount,
         },
       },
     ],
@@ -159,8 +162,8 @@ async function handleResponse(response) {
 app.post("/api/orders", async (req, res) => {
   try {
     // use the cart information passed from the front-end to calculate the order amount detals
-    const { cart } = req.body;
-    const { jsonResponse, httpStatusCode } = await createOrder(cart);
+    const { cart, amount } = req.body;
+    const { jsonResponse, httpStatusCode } = await createOrder(cart, amount);
     res.status(httpStatusCode).json(jsonResponse);
   } catch (error) {
     console.error("Failed to create order:", error);
