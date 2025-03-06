@@ -82,7 +82,7 @@ const ContactUs = () => {
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
             <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-2/3">
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-secondary mb-6">Send Message Us</h2>
+                <h2 className="text-2xl font-bold text-secondary mb-6">Get in touch</h2>
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <input
