@@ -76,13 +76,13 @@ const ContactUs = () => {
     <>
       <ToastContainer />
       <Header title="Contact us" backgroundImage={"url('./images/about-bg.jpg')"} />
-      <div className="px-6 py-6 lg:px-20">
+      <div className="px-2 py-6 lg:px-20">
         <Breadcrumb menuTitle="Contact us" />
-        <div className="bg-gray-50 p-8">
+        <div className="bg-gray-50 p-2 lg:p-8">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
             <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-2/3">
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-secondary mb-6">Send Message Us</h2>
+                <h2 className="text-2xl font-bold text-secondary mb-6">Get in touch</h2>
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <input
@@ -136,7 +136,7 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="bg-white shadow-lg rounded-lg p-8 w-full lg:w-1/3">
+            <div className="bg-white shadow-lg rounded-lg p-2 lg:p-8 w-full lg:w-1/3">
               <h3 className="text-xl font-bold text-gray-800 mb-6">Quick Contact</h3>
               <p className="text-gray-600 mb-6">If you have any questions, simply use the following contact details.</p>
               <div className="space-y-4">
