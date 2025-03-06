@@ -1,7 +1,7 @@
 import React from 'react';
-import PaypalButtons from './PaypalButtons';
+import PaymentButtons from './PaypalButtons';
 
-const PricingCard = ({ title, description, price, originalPrice, discount, reports }) => {
+const PricingCard = ({ title, description, price, amount, originalPrice, discount, reports }) => {
     const features = [
         { text: `${reports} Vehicle Report${reports > 1 ? 's' : ''}` },
         { text: 'Instant Delivery' },
@@ -30,7 +30,7 @@ const PricingCard = ({ title, description, price, originalPrice, discount, repor
                     </li>
                 ))}
             </ul>
-            <PaypalButtons />
+            <PaymentButtons amount={amount} />
         </div>
     );
 };
@@ -48,9 +48,9 @@ const Pricing = () => {
                     </p>
                 </div>
                 <div className="grid gap-8 lg:grid-cols-3">
-                    <PricingCard title="Basic" description="Perfect for individuals who need a single file." price="$30" originalPrice="$35" discount="Save $5" reports={1} />
-                    <PricingCard title="Advance" description="Great for professionals who need up to 2 files." price="$45" originalPrice="$50" discount="Save $5 + 1 Extra File Free" reports={2} />
-                    <PricingCard title="Premium" description="For businesses or individuals needing 2+ files." price="$75" originalPrice="$85" discount="Save $10 + Priority Support" reports={5} />
+                    <PricingCard title="Basic" description="Perfect for individuals who need a single file." price="$30" originalPrice="$35" amount={35} discount="Save $5" reports={1} />
+                    <PricingCard title="Advance" description="Great for professionals who need up to 2 files." price="$45" originalPrice="$50" amount={50} discount="Save $5 + 1 Extra File Free" reports={2} />
+                    <PricingCard title="Premium" description="For businesses or individuals needing 2+ files." price="$75" originalPrice="$85" amount={85} discount="Save $10 + Priority Support" reports={5} />
                 </div>
             </div>
         </section>

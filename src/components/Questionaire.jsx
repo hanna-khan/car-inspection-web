@@ -1,8 +1,57 @@
 import React from 'react';
-import PaypalButtons from "./PaypalButtons";
+import PaymentButtons from './PaypalButtons';
+import { toast, ToastContainer } from "react-toastify";
 
 const Questionaire = (props) => {
     const { form, handleChange, toggleModal, handleSubmit } = props;
+
+      const validateForm = () => {
+        if (!form.name.trim() || !form.email.trim() || !form.number.trim()) {
+          toast.error("All fields are required");
+          return false;
+        }
+      
+        if (!/\S+@\S+\.\S+/.test(form.email)) {
+          toast.error("Enter a valid email address");
+          return false;
+        }
+      
+        if (!/^\d+$/.test(form.number)) {
+          toast.error("Phone number must be numeric");
+          return false;
+        }
+      
+        return true;
+      };
+
+      const submitForm = (e) => {
+        e.preventDefault(); 
+      
+        if (!validateForm()) {
+          return;
+        }
+      
+        fetch(`${process.env.REACT_APP_BASE_API_URL}/submit`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        })
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+          })
+          .then((res) => {
+            toast.success("Message sent successfully!");
+          })
+          .catch((err) => {
+            console.error("Error:", err);
+            toast.error(`Failed to send message: ${err.message}`);
+          });
+      };
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-[100]">
@@ -42,8 +91,8 @@ const Questionaire = (props) => {
                         <label className="block text-gray-700 text-sm font-semibold mb-1">Phone Number</label>
                         <input
                             type="tel"
-                            name="phone"
-                            value={form.phone}
+                            name="number"
+                            value={form.number}
                             onChange={handleChange}
                             className="w-full px-2 py-1 border rounded-lg focus:outline-none"
                         />
@@ -72,10 +121,10 @@ const Questionaire = (props) => {
                         </select>
                     </div>
 
-                    <PaypalButtons />
+                    <PaymentButtons amount={form.packageType === "Premium" ? 35 : form.packageType === "Advanced" ? 50 : 85} />
 
                     <div className="flex justify-end gap-2 mt-2">
-                        <button type="submit" className="bg-secondary text-white px-3 py-2 rounded-md hover:bg-accent text-xs">
+                        <button onClick={submitForm} type="submit" className="bg-secondary text-white px-3 py-2 rounded-md hover:bg-accent text-xs">
                             Submit
                         </button>
                         <button type="button" onClick={toggleModal} className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600 text-xs">
@@ -84,6 +133,7 @@ const Questionaire = (props) => {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
         </div>
     );
 }
