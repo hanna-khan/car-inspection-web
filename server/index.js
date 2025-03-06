@@ -6,7 +6,7 @@ const fetch = require("node-fetch");
 require("dotenv").config();
 
 const app = express();
-const base = "https://api-m.sandbox.paypal.com";
+const base = "https://api-m.paypal.com";
 
 app.use(cors());
 app.use(express.json());
@@ -23,7 +23,6 @@ app.post("/submit", async (req, res) => {
     req.body;
 
   let transporter = nodemailer.createTransport({
-    service: process.env.NODEMAILER_SERVICE,
     host: process.env.NODEMAILER_HOST,
     port: process.env.NODEMAILER_PORT,
     secure: true,
@@ -37,8 +36,8 @@ app.post("/submit", async (req, res) => {
     Name: ${name},
     Email: ${email},
     Number: ${number},
-    VIN Number: ${vinNumber},
-    Package type: ${packageType},
+    VIN Number: ${vinNumber ? vinNumber : "-"},
+    Package type: ${packageType ? packageType : "-"},
     Message: ${message},
   `;
 
@@ -175,6 +174,24 @@ app.post("/api/orders/:orderID/capture", async (req, res) => {
   try {
     const { orderID } = req.params;
     const { jsonResponse, httpStatusCode } = await captureOrder(orderID);
+    let transporter = nodemailer.createTransport({
+      host: process.env.NODEMAILER_HOST,
+      port: process.env.NODEMAILER_PORT,
+      secure: true,
+      auth: {
+        user: process.env.NODEMAILER_EMAIL,
+        pass: process.env.NODEMAILER_PASSWORD,
+      },
+    });
+
+    const text = `An user named ${jsonResponse?.payer?.name?.given_name} having email ${jsonResponse?.payer?.email_address} has been paid successfully!`;
+
+    await transporter.sendMail({
+      from: process.env.NODEMAILER_EMAIL,
+      to: process.env.NODEMAILER_EMAIL,
+      subject: "Payment Captured",
+      text,
+    });
     res.status(httpStatusCode).json(jsonResponse);
   } catch (error) {
     console.error("Failed to create order:", error);

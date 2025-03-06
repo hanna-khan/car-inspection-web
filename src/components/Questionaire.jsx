@@ -121,16 +121,7 @@ const Questionaire = (props) => {
                         </select>
                     </div>
 
-                    <PaymentButtons amount={form.packageType === "Premium" ? 35 : form.packageType === "Advanced" ? 50 : 85} />
-
-                    <div className="flex justify-end gap-2 mt-2">
-                        <button onClick={submitForm} type="submit" className="bg-secondary text-white px-3 py-2 rounded-md hover:bg-accent text-xs">
-                            Submit
-                        </button>
-                        <button type="button" onClick={toggleModal} className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600 text-xs">
-                            Close
-                        </button>
-                    </div>
+                    <PaymentButtons action={submitForm} amount={form.packageType === "Premium" ? 35 : form.packageType === "Advanced" ? 50 : 85} />
                 </form>
             </div>
             <ToastContainer />

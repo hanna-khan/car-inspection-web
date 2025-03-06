@@ -6,7 +6,7 @@ function Message({ content }) {
   return <p>{content}</p>;
 }
 
-function PaymentButtons({ amount }) {
+function PaymentButtons({ amount, action }) {
   const initialOptions = {
     "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID,
     "enable-funding": "paylater,card",
@@ -101,6 +101,9 @@ function PaymentButtons({ amount }) {
                 setMessage(
                   `Transaction ${transaction.status}: ${transaction.id}. See console for all available details`
                 );
+                if (action) {
+                  action();
+                }
                 console.log(
                   "Capture result",
                   orderData,
