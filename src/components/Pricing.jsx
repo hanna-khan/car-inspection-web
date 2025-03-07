@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PaymentButtons from './PaypalButtons';
+import { ToastContainer, toast } from "react-toastify";
+import Questionaire from "./Questionaire";
 
 const PricingCard = ({ title, description, price, amount, originalPrice, discount, reports }) => {
     const features = [
@@ -9,6 +11,56 @@ const PricingCard = ({ title, description, price, amount, originalPrice, discoun
         { text: 'User-Friendly Interface' },
         { text: 'Detailed Vehicle Reports' },
     ];
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const toggleModal = () => setIsModalOpen(!isModalOpen);
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        number: "",
+        vinNumber: "",
+        packageType: "Basic",
+    });
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const validateForm = () => {
+        if (
+            !form.name.trim() ||
+            !form.email.trim() ||
+            !form.number.trim() ||
+            !form.vinNumber.trim()
+        ) {
+            toast.error("All fields are required!");
+            return false;
+        }
+        if (!/\S+@\S+\.\S+/.test(form.email)) {
+            toast.error("Enter a valid email address!");
+            return false;
+        }
+        if (!/^\d{10,15}$/.test(form.number)) {
+            toast.error("Enter a valid number (10-15 digits)!");
+            return false;
+        }
+        return true;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!validateForm()) return;
+
+        toast.success("Report Request Submitted!");
+        setIsModalOpen(false);
+        setForm({
+            name: "",
+            email: "",
+            number: "",
+            vinNumber: "",
+            packageType: "Basic",
+        });
+    };
+
 
     return (
         <div className="flex flex-col p-6 mx-auto max-w-md w-full text-center bg-background border border-gray-300 shadow-md transition-all duration-300 hover:bg-secondary hover:text-white">
@@ -16,9 +68,6 @@ const PricingCard = ({ title, description, price, amount, originalPrice, discoun
             <p className="font-light text-gray-600 text-sm hover:text-white">{description}</p>
             <div className="flex justify-center items-baseline my-4">
                 <span className="mr-2 text-5xl font-extrabold">{originalPrice}</span>
-                {/* {originalPrice && (
-                    <span className="text-md text-gray-400 line-through">{originalPrice}</span>
-                )} */}
             </div>
             <ul role="list" className="mb-6 space-y-3 text-left">
                 {features.map((feature, index) => (
@@ -30,7 +79,26 @@ const PricingCard = ({ title, description, price, amount, originalPrice, discoun
                     </li>
                 ))}
             </ul>
-            <PaymentButtons amount={amount} />
+            <div className="mt-8 flex justify-center ">
+                <button
+                    onClick={toggleModal}
+                    className="rounded-md bg-secondary px-4 py-2 text-[14px] font-semibold text-background hover:text-secondary shadow-sm hover:bg-white w-full"
+                >
+                    Buy now
+                </button>
+            </div>
+
+            {isModalOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
+                    <Questionaire
+                        form={form}
+                        handleChange={handleChange}
+                        handleSubmit={handleSubmit}
+                        toggleModal={toggleModal}
+                    />
+                </div>
+            )}
+            {/* <PaymentButtons amount={amount} /> */}
         </div>
     );
 };
