@@ -75,7 +75,7 @@ const Questionaire = (props) => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm"
+              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm text-black"
             />
           </div>
 
@@ -86,7 +86,7 @@ const Questionaire = (props) => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm"
+              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm text-black"
             />
           </div>
 
@@ -97,7 +97,7 @@ const Questionaire = (props) => {
               name="number"
               value={form.number}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm"
+              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm text-black"
             />
           </div>
 
@@ -108,7 +108,7 @@ const Questionaire = (props) => {
               name="vinNumber"
               value={form.vinNumber}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm"
+              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm text-black"
             />
           </div>
 
@@ -118,7 +118,7 @@ const Questionaire = (props) => {
               name="packageType"
               value={form.packageType}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm"
+              className="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm text-black"
             >
               <option value="Basic">Basic</option>
               <option value="Advanced">Advanced</option>
