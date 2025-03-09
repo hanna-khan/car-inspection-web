@@ -54,8 +54,8 @@ const QuestionnairePage = () => {
             toast.error("Enter a valid email!");
             return false;
         }
-        if (!/^\d{10,15}$/.test(form.number)) {
-            toast.error("Enter a valid phone number (10-15 digits)!");
+        if (!/^\d{4,15}$/.test(form.number)) {
+            toast.error("Enter a valid phone number (4-15 digits)!");
             return false;
         }
         return true;
@@ -84,16 +84,18 @@ const QuestionnairePage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-4xl">
-                <Stepper currentStep={currentStep} />
-                <h2 className="text-2xl font-bold text-center my-6 flex items-center justify-center space-x-2">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-4xl mx-4 my-14">
+                <div className="md:block hidden">
+                    <Stepper currentStep={currentStep} />
+                </div>
+                <h2 className="md:text-2xl  text-xl font-bold text-center my-6 flex items-center justify-center space-x-2">
                     {stepIcons[currentStep]}
                     <span>{steps[currentStep]}</span>
                 </h2>
 
                 {currentStep === 0 && (
                     <form>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="md:grid block grid-cols-2 gap-4 md:space-y-0 space-y-3">
                             <div>
                                 <label className="block text-gray-400">Your Name</label>
                                 <input type="text" name="name" value={form.name} onChange={handleChange} className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg" />

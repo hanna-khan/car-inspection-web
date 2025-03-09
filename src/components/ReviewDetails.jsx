@@ -3,28 +3,24 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const ReviewDetails = ({ form, handleSubmit }) => {
     return (
-        <div className="mt-6 bg-gray-800 p-6 rounded-lg shadow-lg">
-            {/* <h3 className="text-xl font-semibold text-blue-400 text-center mb-4 flex items-center justify-center">
-                <MdPerson className="mr-2 text-2xl" /> Review Your Details
-            </h3> */}
-
-            <div className="grid grid-cols-2 gap-4 text-gray-300">
-                <div className="flex items-center space-x-2">
+        <div className="mt-6">
+            <div className="md:grid block grid-cols-2 md:space-y-0 space-y-3 gap-4 md:gap-y-6 text-gray-300">
+                <div className="flex items-center space-x-2 text-center md:text-left">
                     <MdPerson className="text-blue-400 text-lg" />
                     <span className="font-semibold">Name:</span>
                     <span>{form.name}</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 text-center md:text-left">
                     <MdEmail className="text-blue-400 text-lg" />
                     <span className="font-semibold">Email:</span>
                     <span>{form.email}</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 text-center md:text-left">
                     <MdPhone className="text-blue-400 text-lg" />
                     <span className="font-semibold">Phone:</span>
                     <span>{form.number}</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 text-center md:text-left">
                     <MdDirectionsCar className="text-blue-400 text-lg" />
                     <span className="font-semibold">VIN Number:</span>
                     <span>{form.vinNumber}</span>
@@ -39,16 +35,16 @@ const ReviewDetails = ({ form, handleSubmit }) => {
                     <span className="font-semibold">Total Amount Paid:</span>
                     <span className="text-green-400">${form.packageType === "Premium" ? 85 : form.packageType === "Advanced" ? 50 : 35}</span>
                 </div>
-
             </div>
 
             <button
                 onClick={handleSubmit}
-                className="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all mt-6 font-semibold text-lg flex items-center justify-end space-x-2  m-auto ">
+                className="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all mt-6 font-semibold text-lg flex items-center justify-center md:justify-end space-x-2 w-full md:w-auto">
                 <FaCheckCircle className="text-xl" />
                 <span>Submit</span>
             </button>
         </div>
+
     );
 };
 
