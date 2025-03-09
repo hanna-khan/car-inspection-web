@@ -18,6 +18,8 @@ function PaymentButtons({ amount, action }) {
 
   return (
     <div className="App">
+      <div className="flex justify-center items-center w-full my-4">
+      <div className="w-full max-w-md px-4">
       <PayPalScriptProvider options={initialOptions}>
         <PayPalButtons
           style={{
@@ -120,6 +122,8 @@ function PaymentButtons({ amount, action }) {
         />
       </PayPalScriptProvider>
       <Message content={message} />
+    </div>
+    </div>
     </div>
   );
 }

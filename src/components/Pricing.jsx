@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import PaymentButtons from './PaypalButtons';
 import { ToastContainer, toast } from "react-toastify";
-import Questionaire from "./Questionaire";
+import { useNavigate } from "react-router-dom";
 
-const PricingCard = ({ title, description, price, amount, originalPrice, discount, reports }) => {
+const PricingCard = ({ title, description, originalPrice, reports }) => {
+    const navigate = useNavigate();
     const features = [
         { text: `${reports} Vehicle Report${reports > 1 ? 's' : ''}` },
         { text: 'Instant Delivery' },
@@ -63,7 +63,9 @@ const PricingCard = ({ title, description, price, amount, originalPrice, discoun
 
 
     return (
-        <div className="flex flex-col p-6 mx-auto max-w-md w-full text-center bg-background border border-gray-300 shadow-md transition-all duration-300 hover:bg-secondary hover:text-white">
+        <div className="cursor-pointer flex flex-col p-6 mx-auto max-w-md w-full text-center bg-background border border-gray-300 shadow-md transition-all duration-300 hover:bg-secondary hover:text-white"
+            onClick={() => navigate("/questionnaire")}
+        >
             <h3 className="mb-3 text-2xl font-bold">{title}</h3>
             <p className="font-light text-gray-600 text-sm hover:text-white">{description}</p>
             <div className="flex justify-center items-baseline my-4">
@@ -81,14 +83,13 @@ const PricingCard = ({ title, description, price, amount, originalPrice, discoun
             </ul>
             <div className="mt-8 flex justify-center ">
                 <button
-                    onClick={toggleModal}
                     className="rounded-md bg-secondary px-4 py-2 text-[14px] font-semibold text-background hover:text-secondary shadow-sm hover:bg-white w-full"
                 >
                     Buy now
                 </button>
             </div>
 
-            {isModalOpen && (
+            {/* {isModalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
                     <Questionaire
                         form={form}
@@ -97,7 +98,7 @@ const PricingCard = ({ title, description, price, amount, originalPrice, discoun
                         toggleModal={toggleModal}
                     />
                 </div>
-            )}
+            )} */}
             {/* <PaymentButtons amount={amount} /> */}
         </div>
     );

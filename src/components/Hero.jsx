@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Questionaire from "./Questionaire";
+import { useNavigate } from "react-router-dom";
+
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -78,7 +81,7 @@ const Hero = () => {
           </p>
           <div className="mt-8 flex gap-x-6">
             <button
-              onClick={toggleModal}
+              onClick={() => navigate("/questionnaire")}
               className="rounded-md bg-secondary px-4 py-2 text-[12px] font-semibold text-background shadow-sm hover:bg-accent"
             >
               Buy Report
@@ -93,7 +96,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
           <Questionaire
             form={form}
@@ -102,7 +105,7 @@ const Hero = () => {
             toggleModal={toggleModal}
           />
         </div>
-      )}
+      )} */}
 
       {/* VIN Input Card */}
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-50px] bg-secondary p-4 sm:p-6 rounded-xl shadow-xl w-4/5 lg:w-2/3 max-w-md flex flex-col sm:flex-row items-center gap-3 z-30">
@@ -116,7 +119,7 @@ const Hero = () => {
         />
         <button
           className="bg-accent text-white px-4 py-2 rounded-lg hover:bg-hoverBg text-sm w-full sm:w-auto"
-          onClick={toggleModal}
+          onClick={() => navigate("/questionnaire")}
         >
           Enter
         </button>

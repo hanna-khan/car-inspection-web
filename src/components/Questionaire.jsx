@@ -126,7 +126,9 @@ const Questionaire = (props) => {
             </select>
           </div>
 
-          <PaymentButtons action={submitForm} amount={form.packageType === "Premium" ? 35 : form.packageType === "Advanced" ? 50 : 85} />
+          <div className='w-1/4'>
+            <PaymentButtons action={submitForm} amount={form.packageType === "Premium" ? 35 : form.packageType === "Advanced" ? 50 : 85} />
+          </div>
         </form>
       </div>
       <ToastContainer />

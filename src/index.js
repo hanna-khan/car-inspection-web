@@ -9,6 +9,7 @@ import NoPage from './pages/NoPage';
 import Layout from './components/Layout';
 import SampleReport from './pages/SampleReport.jsx';
 import WindowSticker from './pages/WindowSticker.jsx';
+import QuestionairePage from './pages/QuestionairePage.jsx';
 import LearnMore from './pages/LearnMore.jsx';
 import ContactUs from './pages/ContactUs.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "questionnaire",
+        element: <QuestionairePage />
       },
       {
         path: "aboutus",
