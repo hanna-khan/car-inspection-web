@@ -67,6 +67,9 @@ function PaymentButtons({ amount, action }) {
             }
           }}
           onApprove={async (data, actions) => {
+            if (action) {
+              action();
+            }
             try {
               const response = await fetch(
                 `${process.env.REACT_APP_BASE_API_URL}/api/orders/${data.orderID}/capture`,
@@ -103,9 +106,6 @@ function PaymentButtons({ amount, action }) {
                 setMessage(
                   `Transaction ${transaction.status}: ${transaction.id}. See console for all available details`
                 );
-                if (action) {
-                  action();
-                }
                 console.log(
                   "Capture result",
                   orderData,

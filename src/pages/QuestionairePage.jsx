@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { IoIosCheckmarkCircleOutline, IoIosCheckmarkCircle } from "react-icons/io";
 import PaymentButtons from "../components/PaypalButtons";
 import ReviewDetails from "../components/ReviewDetails";
-import { FaUser, FaCreditCard, FaCheckCircle } from "react-icons/fa";
+import { FaUser, FaCreditCard } from "react-icons/fa";
+import { useSearchParams } from "react-router-dom";
 
-const steps = ["Personal Information", "Payment", "Review & Submit"];
+const steps = ["Personal Information", "Payment"];
 const stepIcons = {
     0: <FaUser className="text-blue-400 text-2xl" />,
     1: <FaCreditCard className="text-blue-400 text-2xl" />,
-    2: <FaCheckCircle className="text-blue-400 text-2xl" />,
 };
 
 const Stepper = ({ currentStep }) => {
@@ -39,7 +39,7 @@ const QuestionnairePage = () => {
         vinNumber: "",
         packageType: "Basic",
     });
-    const [isPaid, setIsPaid] = useState(false);
+    const [searchParams] = useSearchParams();
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -61,6 +61,35 @@ const QuestionnairePage = () => {
         return true;
     };
 
+      const submitForm = (e) => {
+        e.preventDefault();
+    
+        if (!validateForm()) {
+          return;
+        }
+    
+        fetch(`${process.env.REACT_APP_BASE_API_URL}/submit`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        })
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+          })
+          .then((res) => {
+            toast.success("Payment successfully!");
+          })
+          .catch((err) => {
+            console.error("Error:", err);
+            toast.error(`Failed to send message: ${err.message}`);
+          });
+      };
+
     const handleNextStep = (e) => {
         if (e) e.preventDefault();
         if (currentStep === 0 && !validateForm()) return;
@@ -73,14 +102,23 @@ const QuestionnairePage = () => {
         setCurrentStep(currentStep + 1);
     };
 
-    const handlePaymentSuccess = () => {
-        setIsPaid(true);
-        toast.success("Payment successful!");
-    };
+    // const handlePaymentSuccess = () => {
+    //     setIsPaid(true);
+    //     toast.success("Payment successful!");
+    // };
 
-    const handleSubmit = () => {
-        toast.success("Form submitted successfully!");
-    };
+    // const handleSubmit = () => {
+    //     toast.success("Form submitted successfully!");
+    // };
+
+    useEffect(() => {
+        if (searchParams.get("package")) {
+            setForm({packageType: searchParams.get("package")})
+        }
+        if (searchParams.get("vin")) {
+            setForm({vinNumber: searchParams.get("vin")})
+        }
+    }, [searchParams])
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
@@ -116,7 +154,7 @@ const QuestionnairePage = () => {
                                 <label className="block text-gray-400">Package Type</label>
                                 <select name="packageType" value={form.packageType} onChange={handleChange} className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg">
                                     <option value="Basic">Basic - $35</option>
-                                    <option value="Advanced">Advanced - $50</option>
+                                    <option value="Advance">Advance - $50</option>
                                     <option value="Premium">Premium - $85</option>
                                 </select>
                             </div>
@@ -134,17 +172,14 @@ const QuestionnairePage = () => {
                             <span>PayPal</span>
                             <input type="radio" name="payment" checked readOnly className="w-5 h-5" />
                         </div>
-                        <PaymentButtons onSuccess={handlePaymentSuccess} amount={form.packageType === "Premium" ? 85 : form.packageType === "Advanced" ? 50 : 35} />
-                        <button onClick={handleNextStep} className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition block m-auto my-4">
-                            Proceed to Review
-                        </button>
+                        <PaymentButtons action={submitForm} amount={form.packageType === "Premium" ? 85 : form.packageType === "Advanced" ? 50 : 35} />
                     </div>
                 )}
 
                 {currentStep === 2 && (
                     <ReviewDetails
                         form={form}
-                        handleSubmit={handleSubmit}
+                        handleSubmit={submitForm}
                     />
                 )}
 

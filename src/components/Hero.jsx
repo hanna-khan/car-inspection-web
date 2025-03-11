@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Questionaire from "./Questionaire";
 import { useNavigate } from "react-router-dom";
 
-
 const Hero = () => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -119,7 +118,9 @@ const Hero = () => {
         />
         <button
           className="bg-accent text-white px-4 py-2 rounded-lg hover:bg-hoverBg text-sm w-full sm:w-auto"
-          onClick={() => navigate("/questionnaire")}
+          onClick={() =>
+            form.vinNumber && navigate(`/questionnaire?vin=${form.vinNumber}`)
+          }
         >
           Enter
         </button>

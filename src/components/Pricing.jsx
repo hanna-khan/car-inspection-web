@@ -64,7 +64,7 @@ const PricingCard = ({ title, description, originalPrice, reports }) => {
 
     return (
         <div className="cursor-pointer flex flex-col p-6 mx-auto max-w-md w-full text-center bg-background border border-gray-300 shadow-md transition-all duration-300 hover:bg-secondary hover:text-white"
-            onClick={() => navigate("/questionnaire")}
+            onClick={() => navigate(`/questionnaire?package=${title}`)}
         >
             <h3 className="mb-3 text-2xl font-bold">{title}</h3>
             <p className="font-light text-gray-600 text-sm hover:text-white">{description}</p>
