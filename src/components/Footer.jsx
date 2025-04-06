@@ -61,33 +61,64 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact Us */}
                 <div>
                     <h3 className="text-lg font-semibold mb-4">CONTACT US</h3>
                     <div className="border-b-2 border-accent w-12 mb-4"></div>
-                    <ul className="space-y-3 text-white">
-                        {[
-                            {
-                                icon: <CiLocationOn size={22} />,
-                                label: "ADDRESS",
-                                value: "1632 Toyon Via, California",
-                            },
-                            {
-                                icon: <MdOutlineEmail size={22} />,
-                                label: "EMAIL",
-                                value: "contact@proinspectautos.com",
-                            },
-                        ].map((item, index) => (
-                            <li key={index} className="flex">
-                                <div className="mt-2 mr-4">{item.icon}</div>
-                                <div className="flex flex-col">
-                                    <p className="font-bold">{item.label}</p>
-                                    <p>{item.value}</p>
+
+                    {/* Email */}
+                    <div className="flex items-start mb-6">
+                        <MdOutlineEmail size={22} className="mt-1 mr-3" />
+                        <div>
+                            <p className="font-bold text-sm">EMAIL</p>
+                            <p className="text-sm">contact@proinspectautos.com</p>
+                        </div>
+                    </div>
+
+                    {/* Our Offices */}
+                    <div className="mb-3">
+                        <p className="font-bold text-sm mb-2">OUR OFFICES</p>
+                        <div className="space-y-2">
+                            {[
+                                {
+                                    title: "UK",
+                                    address:
+                                        "Near Levenshulme Methodist Church, 824 Stockport Rd, Levenshulme, Manchester M19 3AW, United Kingdom",
+                                },
+                                {
+                                    title: "CANADA",
+                                    address:
+                                        "Lane North Woburn West Jedburgh, Toronto, ON, Canada",
+                                },
+                                {
+                                    title: "AUSTRALIA",
+                                    address: "1 Goodsell St, St Peters NSW 2044, Australia",
+                                },
+                                {
+                                    title: "NEW ZEALAND",
+                                    address:
+                                        "45 Peachgrove Road, Hamilton East, Hamilton 3216, New Zealand",
+                                },
+                                {
+                                    title: "KENYA",
+                                    address: "Mojwa Road, Mitunguu South Imenti, Kenya",
+                                },
+                                {
+                                    title: "USA",
+                                    address: "1632 Toyon Via, California",
+                                },
+                            ].map((office, index) => (
+                                <div key={index} className="text-sm text-white ">
+                                    <span className="block font-semibold text-accent text-[13px] mb-0.5">
+                                        {office.title}
+                                    </span>
+                                    <span className="text-[12px] leading-snug block">{office.address}</span>
                                 </div>
-                            </li>
-                        ))}
-                    </ul>
+                            ))}
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
 
             {/* Footer Bottom Links */}

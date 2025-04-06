@@ -27,31 +27,32 @@ const Navbar = () => {
                 </div>
 
                 {/* Contact Info */}
-                <div className="flex items-center space-x-10 text-textPrimary">
-                    {/* <div className="flex flex-col">
-                        <div className="flex items-center">
-                            <MdPhoneIphone size={20} />
-                            <span>CALL US</span>
-                        </div>
-                        <p className="text-textSecondary">+1209-734-0181</p>
-                    </div> */}
-                    <div className="flex flex-col">
-                        <div className="flex items-center">
+                <div className="flex flex-wrap gap-8 text-textPrimary">
+                    {/* Email */}
+                    <div className="flex items-start gap-3 min-w-[250px]">
+                        <div className="bg-primary text-white p-2 rounded-full">
                             <MdOutlineMailOutline size={20} />
-                            <span>SEND US A MAIL</span>
                         </div>
-                        <p className="text-textSecondary">contact@proinspectautos.com</p>
+                        <div className="flex flex-col">
+                            <span className="font-semibold text-sm">SEND US A MAIL</span>
+                            <p className="text-textSecondary text-sm">contact@proinspectautos.com</p>
+                        </div>
                     </div>
-                    <div className="flex flex-col">
-                        <div className="flex items-center">
+
+                    {/* Offices */}
+                    <div className="flex items-start gap-3 min-w-[250px]">
+                        <div className="bg-primary text-white p-2 rounded-full">
                             <FaLocationDot size={20} />
-                            <span>OUR ADDRESS</span>
                         </div>
-                        <p className="text-textSecondary">
-                            1632 Toyon Via, California
-                        </p>
+                        <div className="flex flex-col">
+                            <span className="font-semibold text-sm">OUR OFFICES</span>
+                            <p className="text-textSecondary text-sm">
+                                UK, CANADA, AUSTRALIA, NEW ZEALAND, KENYA, USA
+                            </p>
+                        </div>
                     </div>
                 </div>
+
 
                 {/* Contact Us Button */}
                 <Link to="/contactus" className="bg-primary text-white px-8 py-4 rounded hover:bg-hoverBg inline-block">

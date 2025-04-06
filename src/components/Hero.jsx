@@ -86,7 +86,7 @@ const Hero = () => {
               Buy Report
             </button>
             <a
-              href="#"
+              onClick={() => navigate("/aboutus")}
               className="rounded-md bg-accent px-4 py-2 text-[12px] font-semibold text-background shadow-sm hover:bg-hoverBg"
             >
               About Us
