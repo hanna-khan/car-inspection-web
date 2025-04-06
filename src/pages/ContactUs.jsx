@@ -97,7 +97,7 @@ const ContactUs = () => {
                       type="email"
                       name="email"
                       value={form.email}
-                      placeholder="Your Email Id"
+                      placeholder="Your Email"
                       className="border border-gray-300 rounded-lg p-3 w-full focus:outline-[#818181]"
                       onChange={(e) => setForm({ ...form, [e.target.name]: e.target.value })}
                     />
@@ -136,100 +136,94 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="bg-white shadow-lg rounded-lg p-2 lg:p-8 w-full lg:w-1/3 lg:overflow-y-auto lg:max-h-[500px]">
-              <h3 className="text-xl font-bold text-gray-800 mb-6">Quick Contact</h3>
-              <p className="text-gray-600 mb-6">
+            <div className="bg-white shadow-xl rounded-lg p-4 w-full lg:w-1/3 lg:overflow-y-auto lg:max-h-[500px]">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">Quick Contact</h3>
+              <p className="text-gray-600 mb-2 text-sm">
                 If you have any questions, simply use the following contact details.
               </p>
-              <div className="space-y-4">
-                {/* USA Office */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white p-1 text-2xl">
+              <div className="space-y-2">
+                {/* Email */}
+                <div className="flex gap-2 items-center">
+                  <div className="bg-secondary text-white p-2 rounded-full text-lg">
+                    <MdOutlineMailOutline />
+                  </div>
+                  <div className="flex flex-col mt-4">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                    <p className="text-gray-700 text-sm">
+                      contact@proinspectautos.com
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-2 text-center items-center">
+                  <div className="bg-secondary text-white p-2 rounded-full text-lg">
                     <CiLocationOn />
                   </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Offices</h3>
+                </div>
+                {/* USA Office */}
+                <div className="flex items-start gap-2 hover:bg-gray-100 p-2 rounded-lg transition ease-in-out duration-300">
                   <div className="flex flex-col">
-                    <p className="font-semibold">USA OFFICE:</p>
-                    <p className="text-gray-800">1632 Toyon Via, California</p>
+                    <p className="font-semibold text-gray-800">USA OFFICE:</p>
+                    <p className="text-gray-700 text-sm">
+                      1632 Toyon Via, California
+                    </p>
                   </div>
                 </div>
 
                 {/* UK Office */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white p-1 text-2xl">
-                    <CiLocationOn />
-                  </div>
+                <div className="flex items-start gap-2 hover:bg-gray-100 p-2 rounded-lg transition ease-in-out duration-300">
                   <div className="flex flex-col">
-                    <p className="font-semibold">UK OFFICE:</p>
-                    <p className="text-gray-800">
+                    <p className="font-semibold text-gray-800">UK OFFICE:</p>
+                    <p className="text-gray-700 text-sm">
                       Near Levenshulme Methodist Church, 824 Stockport Rd, Levenshulme, Manchester M19 3AW, United Kingdom
                     </p>
                   </div>
                 </div>
 
                 {/* Canada Office */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white p-1 text-2xl">
-                    <CiLocationOn />
-                  </div>
+                <div className="flex items-start gap-2 hover:bg-gray-100 p-2 rounded-lg transition ease-in-out duration-300">
                   <div className="flex flex-col">
-                    <p className="font-semibold">CANADA OFFICE:</p>
-                    <p className="text-gray-800">
+                    <p className="font-semibold text-gray-800">CANADA OFFICE:</p>
+                    <p className="text-gray-700 text-sm">
                       Lane North Woburn West Jedburgh, Toronto, ON, Canada
                     </p>
                   </div>
                 </div>
 
                 {/* Australia Office */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white p-1 text-2xl">
-                    <CiLocationOn />
-                  </div>
+                <div className="flex items-start gap-2 hover:bg-gray-100 p-2 rounded-lg transition ease-in-out duration-300">
                   <div className="flex flex-col">
-                    <p className="font-semibold">AUSTRALIA OFFICE:</p>
-                    <p className="text-gray-800">
+                    <p className="font-semibold text-gray-800">AUSTRALIA OFFICE:</p>
+                    <p className="text-gray-700 text-sm">
                       1 Goodsell St, St Peters NSW 2044, Australia
                     </p>
                   </div>
                 </div>
 
                 {/* New Zealand Office */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white p-1 text-2xl">
-                    <CiLocationOn />
-                  </div>
+                <div className="flex items-start gap-2 hover:bg-gray-100 p-2 rounded-lg transition ease-in-out duration-300">
                   <div className="flex flex-col">
-                    <p className="font-semibold">NEW ZEALAND OFFICE:</p>
-                    <p className="text-gray-800">
+                    <p className="font-semibold text-gray-800">NEW ZEALAND OFFICE:</p>
+                    <p className="text-gray-700 text-sm">
                       45 Peachgrove Road, Hamilton East, Hamilton 3216, New Zealand
                     </p>
                   </div>
                 </div>
 
                 {/* Kenya Office */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white p-1 text-2xl">
-                    <CiLocationOn />
-                  </div>
+                <div className="flex items-start gap-2 hover:bg-gray-100 p-2 rounded-lg transition ease-in-out duration-300">
                   <div className="flex flex-col">
-                    <p className="font-semibold">KENYA OFFICE:</p>
-                    <p className="text-gray-800">
+                    <p className="font-semibold text-gray-800">KENYA OFFICE:</p>
+                    <p className="text-gray-700 text-sm">
                       Mojwa Road, Mitunguu South Imenti, Kenya
                     </p>
                   </div>
                 </div>
 
-                {/* Email */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white p-1 text-2xl">
-                    <MdOutlineMailOutline />
-                  </div>
-                  <div className="flex flex-col">
-                    <p className="font-semibold">EMAIL:</p>
-                    <p className="text-gray-800">contact@proinspectautos.com</p>
-                  </div>
-                </div>
+
               </div>
             </div>
+
 
           </div>
         </div>
