@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@paypal/react-paypal-js": "^8.8.2",
+    "@paypal/react-paypal-js": "8.8.2",
     "cra-template": "1.2.0",
     "headlessui": "^0.0.0",
     "heroicons": "^2.2.0",
