@@ -33,7 +33,7 @@ const ReviewDetails = ({ form, handleSubmit }) => {
                 <div className="col-span-2 flex items-center space-x-2">
                     <MdAttachMoney className="text-blue-400 text-lg" />
                     <span className="font-semibold">Total Amount Paid:</span>
-                    <span className="text-green-400">${form.packageType === "Premium" ? 85 : form.packageType === "Advanced" ? 50 : 35}</span>
+                    <span className="text-green-400">${form.packageType === "Premium" ? 100 : form.packageType === "Advanced" ? 50 : 30}</span>
                 </div>
             </div>
 

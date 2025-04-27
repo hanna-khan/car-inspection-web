@@ -39,37 +39,30 @@ export const welcomeData = [
 export const testimonials = [
     {
         id: 1,
-        name: "David Matin",
-        role: "Student",
+        name: "John M.",
+        role: "Car Seller",
         image: "./images/testimonial1.jpg",
         quote:
-            "PRO INSPECT AUTO saved me from buying a car with a hidden accident history. The report was detailed and easy to understand. Highly recommend!",
+            "Selling my car was a breeze thanks to the detailed report I got from this site. It highlighted all the key points that buyers were interested in, which helped me sell my car faster and for a better price. The process was straightforward and the customer support was excellent. Worth every penny!",
     },
     {
         id: 2,
-        name: "Salva Morina",
-        role: "Student",
-        image: "./images/testimonial2.jpg",
+        name: "Michael B.",
+        role: "Car Owner",
+        image: "./images/testimonial1.jpg",
         quote:
-            "I was able to sell my car quickly because I had a full history report from PRO INSPECT AUTO. The buyer was impressed with the transparency and accuracy.",
+            "I used this service to check the history of a car I inherited. The report was thorough and helped me make an informed decision about keeping the car. Great service!",
     },
     {
         id: 3,
-        name: "John Doe",
-        role: "Teacher",
+        name: "Sarah T.",
+        role: "Car Buyer",
         image: "./images/testimonial1.jpg",
         quote:
-            "Using PRO INSPECT AUTO gave me the confidence to make a smart purchase. The history report was incredibly detailed and easy to follow!",
-    },
-    {
-        id: 4,
-        name: "Emily Carter",
-        role: "Designer",
-        image: "./images/testimonial2.jpg",
-        quote:
-            "Thanks to PRO INSPECT AUTO, I avoided buying a car with hidden damages. Their service is top-notch!",
+            "I recently used this service to get a comprehensive report on a used car I was considering. The report was incredibly detailed and helped me avoid a bad deal. I was able to negotiate confidently and ended up with a great car. Highly recommend for anyone wanting peace of mind before making a purchase!",
     },
 ];
+
 
 export const stats = [
     {

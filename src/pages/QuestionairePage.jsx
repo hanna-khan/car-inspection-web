@@ -153,9 +153,9 @@ const QuestionnairePage = () => {
                             <div className="col-span-2">
                                 <label className="block text-gray-400">Package Type</label>
                                 <select name="packageType" value={form.packageType} onChange={handleChange} className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg">
-                                    <option value="Basic">Basic - $35</option>
-                                    <option value="Advance">Advance - $50</option>
-                                    <option value="Premium">Premium - $85</option>
+                                    <option value="Basic">Basic - £30</option>
+                                    <option value="Advance">Advance - £50</option>
+                                    <option value="Premium">Premium - 100</option>
                                 </select>
                             </div>
                         </div>
@@ -172,7 +172,7 @@ const QuestionnairePage = () => {
                             <span>PayPal</span>
                             <input type="radio" name="payment" checked readOnly className="w-5 h-5" />
                         </div>
-                        <PaymentButtons action={submitForm} amount={form.packageType === "Premium" ? 85 : form.packageType === "Advanced" ? 50 : 35} />
+                        <PaymentButtons action={submitForm} amount={form.packageType === "Premium" ? 100 : form.packageType === "Advanced" ? 50 : 10} />
                     </div>
                 )}
 
