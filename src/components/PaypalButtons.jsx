@@ -12,6 +12,7 @@ function PaymentButtons({ amount, action }) {
     "enable-funding": "paylater,card",
     "disable-funding": "",
     "data-sdk-integration-source": "integrationbuilder_sc",
+    currency: "EUR",
   };
 
   const [message, setMessage] = useState("");
