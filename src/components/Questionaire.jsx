@@ -1,5 +1,5 @@
-import React from 'react';
-import PaymentButtons from './PaypalButtons';
+import React from "react";
+import PaymentButtons from "./PaypalButtons";
 import { toast, ToastContainer } from "react-toastify";
 
 const Questionaire = (props) => {
@@ -56,7 +56,6 @@ const Questionaire = (props) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-[100] p-4">
       <div className="relative bg-white p-5 rounded-2xl shadow-2xl max-w-lg w-full overflow-y-auto md:h-[65%] h-auto transition-all">
-
         {/* Close Button */}
         <button
           onClick={toggleModal}
@@ -65,11 +64,15 @@ const Questionaire = (props) => {
           ✕
         </button>
 
-        <h2 className="text-xl font-bold text-secondary mb-4 text-center">Request Report</h2>
+        <h2 className="text-xl font-bold text-secondary mb-4 text-center">
+          Request Report
+        </h2>
 
         <form onSubmit={handleSubmit} className="space-y-3">
-          <div className='flex flex-col items-start'>
-            <label className="block text-gray-700 text-sm font-semibold mb-1">Name</label>
+          <div className="flex flex-col items-start">
+            <label className="block text-gray-700 text-sm font-semibold mb-1">
+              Name
+            </label>
             <input
               type="text"
               name="name"
@@ -79,8 +82,10 @@ const Questionaire = (props) => {
             />
           </div>
 
-          <div className='flex flex-col items-start'>
-            <label className="block text-gray-700 text-sm font-semibold mb-1">Email</label>
+          <div className="flex flex-col items-start">
+            <label className="block text-gray-700 text-sm font-semibold mb-1">
+              Email
+            </label>
             <input
               type="email"
               name="email"
@@ -90,8 +95,10 @@ const Questionaire = (props) => {
             />
           </div>
 
-          <div className='flex flex-col items-start'>
-            <label className="block text-gray-700 text-sm font-semibold mb-1">Phone Number</label>
+          <div className="flex flex-col items-start">
+            <label className="block text-gray-700 text-sm font-semibold mb-1">
+              Phone Number
+            </label>
             <input
               type="tel"
               name="number"
@@ -101,8 +108,10 @@ const Questionaire = (props) => {
             />
           </div>
 
-          <div className='flex flex-col items-start'>
-            <label className="block text-gray-700 text-sm font-semibold mb-1">VIN Number</label>
+          <div className="flex flex-col items-start">
+            <label className="block text-gray-700 text-sm font-semibold mb-1">
+              VIN Number
+            </label>
             <input
               type="text"
               name="vinNumber"
@@ -112,8 +121,10 @@ const Questionaire = (props) => {
             />
           </div>
 
-          <div className='flex flex-col items-start'>
-            <label className="block text-gray-700 text-sm font-semibold mb-1">Package Type</label>
+          <div className="flex flex-col items-start">
+            <label className="block text-gray-700 text-sm font-semibold mb-1">
+              Package Type
+            </label>
             <select
               name="packageType"
               value={form.packageType}
@@ -126,15 +137,23 @@ const Questionaire = (props) => {
             </select>
           </div>
 
-          <div className='w-1/4'>
-            <PaymentButtons action={submitForm} amount={form.packageType === "Premium" ? 30 : form.packageType === "Advanced" ? 50 : 100} />
+          <div className="w-1/4">
+            <PaymentButtons
+              action={submitForm}
+              amount={
+                form.packageType === "Premium"
+                  ? 100
+                  : form.packageType === "Advanced"
+                  ? 50
+                  : 30
+              }
+            />
           </div>
         </form>
       </div>
       <ToastContainer />
     </div>
-
   );
-}
+};
 
 export default Questionaire;
