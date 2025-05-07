@@ -45,9 +45,9 @@ const Navbar = () => {
                             <FaLocationDot size={20} />
                         </div>
                         <div className="flex flex-col">
-                            <span className="font-semibold text-sm">OUR OFFICES</span>
+                            <span className="font-semibold text-sm">OUR OFFICE</span>
                             <p className="text-textSecondary text-sm">
-                                UK, CANADA, AUSTRALIA, NEW ZEALAND, KENYA, USA
+                            824 Stockport Rd, Levenshulme, Manchester, UK
                             </p>
                         </div>
                     </div>

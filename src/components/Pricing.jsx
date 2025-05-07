@@ -118,8 +118,8 @@ const Pricing = () => {
                 </div>
                 <div className="grid gap-8 lg:grid-cols-3">
                     <PricingCard title="Basic" description="Perfect for individuals who need a single file." price="£30" originalPrice="£30" amount={30} discount="Save £5" reports={1} />
-                    <PricingCard title="Advance" description="Great for professionals who need up to 2 files." price="$50" originalPrice="£50" amount={50} discount="Save £5 + 1 Extra File Free" reports={2} />
-                    <PricingCard title="Premium" description="For businesses or individuals needing 2+ files." price="$100" originalPrice="£100" amount={100} discount="Save $10 + Priority Support" reports={5} />
+                    <PricingCard title="Advance" description="Great for professionals who need up to 2 files." price="£50" originalPrice="£50" amount={50} discount="Save £5 + 1 Extra File Free" reports={2} />
+                    <PricingCard title="Premium" description="For businesses or individuals needing 2+ files." price="£100" originalPrice="£100" amount={100} discount="Save £10 + Priority Support" reports={5} />
                 </div>
             </div>
         </section>

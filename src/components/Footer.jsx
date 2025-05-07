@@ -42,7 +42,7 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-4">LEARN MORE</h3>
                         <div className="border-b-2 border-accent w-12 mb-6"></div>
                         <ul className="space-y-3 text-white">
-                            {[ "About Us", "Sample Report", "FAQ", "Privacy Policy", "Terms & Conditions" ].map((item) => (
+                            {["About Us", "Sample Report", "FAQ", "Privacy Policy", "Terms & Conditions"].map((item) => (
                                 <li key={item}>
                                     <Link
                                         to={`/${item.toLowerCase().replace(/\s+/g, '')}`}
@@ -75,25 +75,16 @@ const Footer = () => {
                         <div className="flex mb-6 items-center">
                             <CiLocationOn size={22} className="mt-1 mr-3 text-accent" />
                             <div>
-                                <p className="font-bold text-sm">OUR OFFICES</p>
+                                <p className="font-bold text-sm">OUR OFFICE</p>
                             </div>
                         </div>
                         <div className="space-y-3 ml-2">
-                            {[ 
-                                { title: "UK", address: "Near Levenshulme Methodist Church, 824 Stockport Rd, Levenshulme, Manchester M19 3AW, United Kingdom" },
-                                { title: "CANADA", address: "Lane North Woburn West Jedburgh, Toronto, ON, Canada" },
-                                { title: "AUSTRALIA", address: "1 Goodsell St, St Peters NSW 2044, Australia" },
-                                { title: "NEW ZEALAND", address: "45 Peachgrove Road, Hamilton East, Hamilton 3216, New Zealand" },
-                                { title: "KENYA", address: "Mojwa Road, Mitunguu South Imenti, Kenya" },
-                                { title: "USA", address: "1632 Toyon Via, California" },
-                            ].map((office, index) => (
-                                <div key={index} className="text-sm text-white">
-                                    <span className="block font-semibold text-accent text-sm mb-1">
-                                        {office.title}
-                                    </span>
-                                    <span className="text-sm leading-snug block">{office.address}</span>
-                                </div>
-                            ))}
+                            <div className="text-sm text-white">
+                                <span className="block font-semibold text-accent text-sm mb-1">
+                                    {'UK'}
+                                </span>
+                                <span className="text-sm leading-snug block">Near Levenshulme Methodist Church, 824 Stockport Rd, Levenshulme, Manchester M19 3AW, United Kingdom</span>
+                            </div>
                         </div>
                     </div>
                 </div>

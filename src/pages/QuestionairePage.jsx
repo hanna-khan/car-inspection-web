@@ -155,7 +155,7 @@ const QuestionnairePage = () => {
                                 <select name="packageType" value={form.packageType} onChange={handleChange} className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg">
                                     <option value="Basic">Basic - £30</option>
                                     <option value="Advance">Advance - £50</option>
-                                    <option value="Premium">Premium - 100</option>
+                                    <option value="Premium">Premium - £100</option>
                                 </select>
                             </div>
                         </div>
